@@ -1,0 +1,13 @@
+# Java
+bin/
+build/
+out/
+*.class
+
+# JARs
+lib/
+*.jar
+
+# OS
+.DS_Store
+Thumbs.db
