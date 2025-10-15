@@ -1,0 +1,36 @@
+Title:  eternal sunshine
+Artist: Ariana Grande
+Year:   2024
+Title:  Lemonade
+Artist: Beyonce
+Year:   2016
+Title:  Ctrl
+Artist: SZA
+Year:   2017
+Title:  Chilombo
+Artist: Jhene Aiko
+Year:   2020
+Title:  Butterfly
+Artist: Mariah Carey
+Year:   1997
+Title:  Midnights
+Artist: Taylor Swift
+Year:   2022
+Title:  Blue Banisters
+Artist: Lana Del Rey
+Year:   2021
+Title:  Sunburn
+Artist: Dominic Fike
+Year:   2023
+Title:  Wishbone
+Artist: Conan Gray
+Year:   2025
+Title:  Charm
+Artist: Clairo
+Year:   2024
+Title:  The Velvet Rope
+Artist: Janet Jackson
+Year:   1997
+Title:  Vespertine
+Artist: Bjork
+Year:   2001

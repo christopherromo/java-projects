@@ -188,7 +188,7 @@ public class MusicWithFiles {
         System.out.println("Now loading musicwithfiles_input.txt...");
 
         try {
-            File inputFileName = new File("input/musicwithfiles_input.txt");
+            File inputFileName = new File("input/principles of computer science input/musicwithfiles_input.txt");
             inputFile = new Scanner(inputFileName);
 
             while (inputFile.hasNext()) {
@@ -202,7 +202,8 @@ public class MusicWithFiles {
                 albums.add(new Album(title, artist, year));
             }
         } catch (FileNotFoundException ex) {
-            System.out.format("File %s not found.\n", "input/musicwithfiles_input.txt");
+            System.out.format("File %s not found.\n",
+                    "input/principles of computer science input/musicwithfiles_input.txt");
         } finally {
             if (inputFile != null) {
                 inputFile.close();
@@ -219,7 +220,7 @@ public class MusicWithFiles {
     public static void outputFile(Scanner input, ArrayList<Album> albums) {
         PrintWriter outputFile = null;
         System.out.println("Now saving musicwithfiles_output.txt...");
-        String fileName = "output/musicwithfiles_output.txt";
+        String fileName = "output/principles of computer science output/musicwithfiles_output.txt";
         try {
             File outputFileName = new File(fileName);
             outputFile = new PrintWriter(outputFileName);
