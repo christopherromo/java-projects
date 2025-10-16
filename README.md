@@ -8,24 +8,26 @@ This project was built with the following tools:
    - Eclipse IDE
    - Visual Studio Code
 
-This project helped me learn the following:
+This project helped me learn the following:  
 Principles of Computer Science
    - `AsciiArt.java`:           Intro to Java
    - `CompoundInterest.java`:   Variables
    - `ShouldIPostThis.java`:    If statements
    - `LoginCreator.java`:       Boolean logic
    - `Shapes.java`:             For loops
-   - `ShapesWithMethods.java`   Methods
-   - `Decrypter.java`           Encryption & Decryption
-   - `Movies.java`              Arrays
-   - `Music.java`               Classes & Objects
-   - `MailOrder.java`           Array Lists
-   - `Pizzeria.java`            Inheritance
-   - `MusicWithFiles.java`      File handling
+   - `ShapesWithMethods.java`:  Methods
+   - `Decrypter.java`:          Encryption & Decryption
+   - `Movies.java`:             Arrays
+   - `Music.java`:              Classes & Objects
+   - `MailOrder.java`:          Array Lists
+   - `Pizzeria.java`:           Inheritance
+   - `MusicWithFiles.java`:     File handling
 
 Data Structures and Algorithms
-   - `RandomSorting.java`       Libraries
-   - `TourDeTurtles.java`       Inheritance
+   - `RandomSorting.java`:      Libraries
+   - `TourDeTurtles.java`:      Inheritance
+   - `Dogs.java`:               Abstract Classes & Interfaces
+   - `Transportation.java`:     Array Lists            
 
 ---
 # Java Projects

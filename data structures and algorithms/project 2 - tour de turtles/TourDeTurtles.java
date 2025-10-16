@@ -25,6 +25,7 @@ public class TourDeTurtles {
      * and prints out their details along with tour information.
      * 
      * @param args command line arguments
+     * @throws IOException if file not found
      */
     public static void main(String[] args) throws IOException {
         // open file
@@ -91,6 +92,9 @@ public class TourDeTurtles {
     } // main
 } // TourDeTurtles
 
+/**
+ * The SeaTurtle class creates a sea turtle object.
+ */
 class SeaTurtle {
     // instance variables
     private String type;
@@ -143,6 +147,9 @@ class SeaTurtle {
     }
 } // SeaTurtle
 
+/**
+ * The Hawksbill class creates a hawksbill turtle object.
+ */
 class Hawksbill extends SeaTurtle {
     /**
      * constructor that creates a hawksbill turtle object
@@ -163,6 +170,9 @@ class Hawksbill extends SeaTurtle {
     }
 } // Hawksbill
 
+/**
+ * The Loggerhead class creates a loggerhead turtle object.
+ */
 class Loggerhead extends SeaTurtle {
     /**
      * constructor that creates a loggerhead turtle object
@@ -183,6 +193,9 @@ class Loggerhead extends SeaTurtle {
     }
 } // Loggerhead
 
+/**
+ * The GreenTurtle class creates a green turtle object.
+ */
 class GreenTurtle extends SeaTurtle {
     /**
      * constructor that creates a green turtle object
@@ -203,6 +216,9 @@ class GreenTurtle extends SeaTurtle {
     }
 } // GreenTurtle
 
+/**
+ * The Leatherback class creates a leatherback turtle object.
+ */
 class Leatherback extends SeaTurtle {
     /**
      * constructor that creates a leatherback turtle object
@@ -223,6 +239,9 @@ class Leatherback extends SeaTurtle {
     }
 } // Leatherback
 
+/**
+ * The Tour class creates a tour object.
+ */
 class Tour {
     // instance variables
     private int tourYear;

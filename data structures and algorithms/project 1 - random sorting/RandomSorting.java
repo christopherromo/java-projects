@@ -26,6 +26,7 @@ public class RandomSorting {
 	 * back, and sorts them in descending order.
 	 * 
 	 * @param args command line arguments
+	 * @throws IOException if file not found
 	 */
 	public static void main(String[] args) throws IOException {
 		// initialize file and output
@@ -103,5 +104,5 @@ public class RandomSorting {
 		}
 
 		System.out.println("\nFile is in directory: " + fileName.getAbsolutePath());
-	}
-}
+	} // main
+} // RandomSorting

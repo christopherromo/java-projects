@@ -1,0 +1,7 @@
+6
+BorderCollie Izzy 9 10 0 7
+GermanShepherd Otto 9 7 0 10
+GoldenRetriever Charlie 8 0 10 0
+Boxer Duke 7 5 6 8
+GoldenRetriever Freddy 8 0 8 0
+GermanShepherd Rolo 8 8 0 9
