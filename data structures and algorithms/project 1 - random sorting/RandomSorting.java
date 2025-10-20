@@ -5,7 +5,6 @@
  * This file defines the RandomSorting class, which generates 35 random integers,
  * writes them to a file, reads them back, and sorts them in descending order.
  * 
- * 
  * @author Christopher Romo
  * @since 9/1/2022
  * @version 1.0

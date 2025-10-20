@@ -5,7 +5,6 @@
  * This file defines the Dogs class, which reads in dog data from a file,
  * creates dog objects, and analyzes their behaviors.
  * 
- * 
  * @author Christopher Romo
  * @since 9/14/2022
  * @version 1.0

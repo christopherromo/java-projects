@@ -1,0 +1,7 @@
+10
+7 330 150000 Packages Jackson
+6 122 180000 Perishables Zurich
+0 245 100000 Medical Kyiv
+9 625 120000 Military Yokota
+4 817 230000 Water Fort Myers
+1 194 260000 Military Stuttgart

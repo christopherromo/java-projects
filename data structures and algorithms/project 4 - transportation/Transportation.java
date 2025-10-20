@@ -5,7 +5,6 @@
  * This file defines the Transportation class, which creates a cargo terminal
  * with semi-trucks and cargo planes.
  * 
- * 
  * @author Christopher Romo
  * @since 9/29/2022
  * @version 1.0

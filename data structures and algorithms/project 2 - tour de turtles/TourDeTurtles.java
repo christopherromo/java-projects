@@ -5,7 +5,6 @@
  * This file defines the TourDeTurtles class, which reads in turtle data from a file,
  * creates SeaTurtle objects, and prints out their details along with tour information.
  * 
- * 
  * @author Christopher Romo
  * @since 9/8/2022
  * @version 1.0
