@@ -6,7 +6,7 @@
  * aspects of compound interest based on user input.
  * 
  * @author Christopher Romo
- * @since 6/20/2022
+ * @since 06/20/2022
  * @version 1.0
  */
 
@@ -75,5 +75,6 @@ public class CompoundInterest {
         System.out.println("Future value of your total investment: " + df.format(totalInvestment));
 
         input.close();
-    }
-}
+
+    } // main
+} // CompoundInterest

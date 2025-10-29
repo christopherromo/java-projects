@@ -5,7 +5,7 @@
  * This file defines the Stacks class which contains methods to manipulate stacks.
  * 
  * @author Christopher Romo
- * @since 8/7/2022
+ * @since 10/07/2022
  * @version 1.0
  */
 
@@ -17,6 +17,164 @@ import java.io.*;
  * zeros with tens, sorting stacks, merging stacks, and printing stacks.
  */
 public class Stacks {
+	/**
+	 * replaces all zeros in the incoming stack with tens
+	 * 
+	 * @param stack stack to modify
+	 */
+	public static void replaceZerosWithTen(Stack<Integer> stack) {
+		// declare variables
+		int stackSize = stack.size();
+		Stack<Integer> tempStack = new Stack<>();
+
+		// use for loop to replace zeros with ten
+		for (int i = 0; i < stackSize; i++) {
+			if (stack.peek() == 0) {
+				stack.pop();
+				stack.push(10);
+			}
+			tempStack.push(stack.pop());
+		}
+
+		// place values back into original stack
+		for (int i = 0; i < stackSize; i++) {
+			stack.push(tempStack.pop());
+
+		}
+	} // replaceZerosWithTen
+
+	/**
+	 * sorts an incoming generic stack from largest to smallest
+	 * 
+	 * @param <E>    generic type that extends Comparable
+	 * @param aStack stack to sort
+	 */
+	public static <E extends Comparable<E>> void sortStack(GenericStack<E> aStack) {
+		// declare variables
+		E value;
+		boolean foundInsertLocation;
+		int stackSize = aStack.getSize();
+		GenericStack<E> tempStack = new GenericStack<>();
+
+		// run loop to compare values
+		while (!aStack.isEmpty()) {
+			// save top of stack in variable
+			value = aStack.pop();
+			foundInsertLocation = false;
+
+			while (!tempStack.isEmpty() && foundInsertLocation == false) {
+				// compare to temporary stack in order to sort
+				if (value.compareTo(tempStack.peek()) > 0) {
+					aStack.push(tempStack.pop());
+				} else {
+					// exits the while loop, found insertion point
+					foundInsertLocation = true;
+				}
+			} // dig
+
+			// save value on sorted stack
+			tempStack.push(value);
+
+		} // place
+
+		// place values back into original stack
+		for (int i = 0; i < stackSize; i++) {
+			aStack.push(tempStack.pop());
+
+		}
+	} // sortStack
+
+	/**
+	 * merges two sorted generic stacks into one sorted generic stack
+	 * 
+	 * @param <E>      generic type that extends Comparable
+	 * @param stackOne stack to merge
+	 * @param stackTwo stack to merge
+	 * @return merged stack
+	 */
+	public static <E extends Comparable<E>> GenericStack<E> mergeStacks(GenericStack<E> stackOne,
+			GenericStack<E> stackTwo) {
+		// declare mergedStack
+		GenericStack<E> mergedStack = new GenericStack<>();
+
+		// run loop to compare values on both stacks while not both aren't empty
+		while (!stackOne.isEmpty() && !stackTwo.isEmpty()) {
+			if (stackOne.peek().compareTo(stackTwo.peek()) > 0) {
+				mergedStack.push(stackOne.pop());
+			} else if (stackOne.peek().compareTo(stackTwo.peek()) <= 0) {
+				mergedStack.push(stackTwo.pop());
+			}
+		}
+
+		// after the while is done, only one of these will be executed
+		// clear the remaining stack of values by pushing onto merge stacks
+		if (!stackOne.isEmpty()) {
+			while (!stackOne.isEmpty()) {
+				mergedStack.push(stackOne.pop());
+			}
+		}
+		if (!stackTwo.isEmpty()) {
+			while (!stackTwo.isEmpty()) {
+				mergedStack.push(stackTwo.pop());
+			}
+		}
+
+		// return the merged stack
+		return mergedStack;
+
+	} // mergeStacks
+
+	/**
+	 * prints a stack of the type Integer
+	 * 
+	 * @param stack stack to print
+	 */
+	public static void printStack(Stack<Integer> stack) {
+		// declare variables
+		int stackSize = stack.size();
+		Stack<Integer> tempStack = new Stack<>();
+
+		// print stack & fill tempStack
+		for (int i = 0; i < stackSize; i++) {
+			tempStack.push(stack.peek());
+			System.out.println(stack.pop());
+		}
+
+		// place values back into original stack
+		for (int i = 0; i < stackSize; i++) {
+			stack.push(tempStack.pop());
+		}
+
+		System.out.println();
+
+	} // printStack (Integer)
+
+	/**
+	 * prints a generic stack
+	 * 
+	 * @param <E>   generic type that extends Comparable
+	 * @param stack stack to print
+	 */
+	public static <E> void printStack(GenericStack<E> stack) {
+		// declare variables
+		int stackSize = stack.getSize();
+		GenericStack<E> tempStack = new GenericStack<>();
+
+		// print stack & fill tempStack
+		for (int i = 0; i < stackSize; i++) {
+			tempStack.push(stack.peek());
+			System.out.println(stack.pop());
+		}
+
+		// place values back into original stack
+		for (int i = 0; i < stackSize; i++) {
+			stack.push(tempStack.pop());
+		}
+
+		System.out.println();
+
+	} // printStack (Generic)
+
 	/**
 	 * Main method - fill stacks, call methods, and print results.
 	 * 
@@ -135,164 +293,6 @@ public class Stacks {
 		printStack(mergedStringStack);
 
 	} // main
-
-	/**
-	 * replaces all zeros in the incoming stack with tens
-	 * 
-	 * @param stack stack to modify
-	 */
-	public static void replaceZerosWithTen(Stack<Integer> stack) {
-		// declare variables
-		int stackSize = stack.size();
-		Stack<Integer> tempStack = new Stack<>();
-
-		// use for loop to replace zeros with ten
-		for (int i = 0; i < stackSize; i++) {
-			if (stack.peek() == 0) {
-				stack.pop();
-				stack.push(10);
-			}
-			tempStack.push(stack.pop());
-		}
-
-		// place values back into original stack
-		for (int i = 0; i < stackSize; i++) {
-			stack.push(tempStack.pop());
-		}
-
-	} // replaceZerosWithTen
-
-	/**
-	 * sorts an incoming generic stack from largest to smallest
-	 * 
-	 * @param <E>    generic type that extends Comparable
-	 * @param aStack stack to sort
-	 */
-	public static <E extends Comparable<E>> void sortStack(GenericStack<E> aStack) {
-		// declare variables
-		E value;
-		boolean foundInsertLocation;
-		int stackSize = aStack.getSize();
-		GenericStack<E> tempStack = new GenericStack<>();
-
-		// run loop to compare values
-		while (!aStack.isEmpty()) {
-			// save top of stack in variable
-			value = aStack.pop();
-			foundInsertLocation = false;
-
-			while (!tempStack.isEmpty() && foundInsertLocation == false) {
-				// compare to temporary stack in order to sort
-				if (value.compareTo(tempStack.peek()) > 0) {
-					aStack.push(tempStack.pop());
-				} else {
-					// exits the while loop, found insertion point
-					foundInsertLocation = true;
-				}
-			} // dig
-
-			// save value on sorted stack
-			tempStack.push(value);
-
-		} // place
-
-		// place values back into original stack
-		for (int i = 0; i < stackSize; i++) {
-			aStack.push(tempStack.pop());
-		}
-
-	} // sortStack
-
-	/**
-	 * merges two sorted generic stacks into one sorted generic stack
-	 * 
-	 * @param <E>      generic type that extends Comparable
-	 * @param stackOne stack to merge
-	 * @param stackTwo stack to merge
-	 * @return merged stack
-	 */
-	public static <E extends Comparable<E>> GenericStack<E> mergeStacks(GenericStack<E> stackOne,
-			GenericStack<E> stackTwo) {
-		// declare mergedStack
-		GenericStack<E> mergedStack = new GenericStack<>();
-
-		// run loop to compare values on both stacks while not both aren't empty
-		while (!stackOne.isEmpty() && !stackTwo.isEmpty()) {
-			if (stackOne.peek().compareTo(stackTwo.peek()) > 0) {
-				mergedStack.push(stackOne.pop());
-			} else if (stackOne.peek().compareTo(stackTwo.peek()) <= 0) {
-				mergedStack.push(stackTwo.pop());
-			}
-		}
-
-		// after the while is done, only one of these will be executed
-		// clear the remaining stack of values by pushing onto merge stacks
-		if (!stackOne.isEmpty()) {
-			while (!stackOne.isEmpty()) {
-				mergedStack.push(stackOne.pop());
-			}
-		}
-		if (!stackTwo.isEmpty()) {
-			while (!stackTwo.isEmpty()) {
-				mergedStack.push(stackTwo.pop());
-			}
-		}
-
-		// return the merged stack
-		return mergedStack;
-
-	} // mergeStacks
-
-	/**
-	 * prints a stack of the type Integer
-	 * 
-	 * @param stack stack to print
-	 */
-	public static void printStack(Stack<Integer> stack) {
-		// declare variables
-		int stackSize = stack.size();
-		Stack<Integer> tempStack = new Stack<>();
-
-		// print stack & fill tempStack
-		for (int i = 0; i < stackSize; i++) {
-			tempStack.push(stack.peek());
-			System.out.println(stack.pop());
-		}
-
-		// place values back into original stack
-		for (int i = 0; i < stackSize; i++) {
-			stack.push(tempStack.pop());
-		}
-
-		System.out.println();
-
-	} // printStack (Integer)
-
-	/**
-	 * prints a generic stack
-	 * 
-	 * @param <E>   generic type that extends Comparable
-	 * @param stack stack to print
-	 */
-	public static <E> void printStack(GenericStack<E> stack) {
-		// declare variables
-		int stackSize = stack.getSize();
-		GenericStack<E> tempStack = new GenericStack<>();
-
-		// print stack & fill tempStack
-		for (int i = 0; i < stackSize; i++) {
-			tempStack.push(stack.peek());
-			System.out.println(stack.pop());
-		}
-
-		// place values back into original stack
-		for (int i = 0; i < stackSize; i++) {
-			stack.push(tempStack.pop());
-		}
-
-		System.out.println();
-
-	} // printStack (Generic)
 } // Stacks
 
 /**
@@ -330,6 +330,6 @@ class GenericStack<E> {
 	public E peek() {
 		E value = list.get(getSize() - 1);
 		return value;
+		
 	}
-
 } // GenericStack

@@ -6,7 +6,7 @@
  * writes them to a file, reads them back, and sorts them in descending order.
  * 
  * @author Christopher Romo
- * @since 9/1/2022
+ * @since 09/01/2022
  * @version 1.0
  */
 
@@ -103,5 +103,6 @@ public class RandomSorting {
 		}
 
 		System.out.println("\nFile is in directory: " + fileName.getAbsolutePath());
+		
 	} // main
 } // RandomSorting

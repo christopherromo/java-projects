@@ -5,7 +5,7 @@
  * This file defines the Beverage class, which creates a beverage object.
  * 
  * @author Christopher Romo
- * @since 8/2/2022
+ * @since 08/02/2022
  * @version 1.0
  */
 
@@ -45,5 +45,6 @@ public class Beverage extends OrderItem {
     @Override
     public String toString() {
         return String.format("%-30s%10.2f\n", nameToTitleCase(), calculateCost());
+        
     }
-}
+} // Beverage

@@ -6,7 +6,7 @@
  * to the console based on user input (now with methods).
  * 
  * @author Christopher Romo
- * @since 7/8/2022
+ * @since 07/08/2022
  * @version 1.0
  */
 
@@ -203,5 +203,6 @@ public class ShapesWithMethods {
         System.out.println("You have chosen to quit. Goodbye.");
 
         input.close();
-    }
-}
+        
+    } // main
+} // ShapesWithMethods

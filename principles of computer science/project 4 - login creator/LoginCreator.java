@@ -6,7 +6,7 @@
  * for a username and password and checks if they are valid.
  * 
  * @author Christopher Romo
- * @since 6/27/2022
+ * @since 06/27/2022
  * @version 1.0
  */
 
@@ -90,5 +90,6 @@ public class LoginCreator {
         }
 
         input.close();
-    }
-}
+
+    } // main
+} // LoginCreator

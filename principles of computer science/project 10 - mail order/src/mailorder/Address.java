@@ -5,7 +5,7 @@
  * This file defines the Address class, which creates an address object.
  * 
  * @author Christopher Romo
- * @since 7/26/2022
+ * @since 07/26/2022
  * @version 1.0
  */
 
@@ -90,5 +90,6 @@ public class Address {
     public String toString() {
         // returns a string
         return String.format("%s\n%s, %s %05d", streetAddress, city, state, zip);
+
     }
-}
+} // Address

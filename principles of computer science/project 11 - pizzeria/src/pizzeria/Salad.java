@@ -5,7 +5,7 @@
  * This file defines the Salad class, which creates a salad object.
  * 
  * @author Christopher Romo
- * @since 8/2/2022
+ * @since 08/02/2022
  * @version 1.0
  */
 
@@ -47,5 +47,6 @@ public class Salad extends OrderItem {
         return String.format("%-30s%10.2f\n",
                 "Salad with " + nameToTitleCase() + " dressing",
                 calculateCost());
+                
     }
-}
+} // Salad

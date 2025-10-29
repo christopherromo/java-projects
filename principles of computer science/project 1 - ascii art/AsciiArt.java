@@ -5,7 +5,7 @@
  * This file defines the AsciiArt class, which prints ASCII art to the console.
  * 
  * @author Christopher Romo
- * @since 6/16/2022
+ * @since 06/16/2022
  * @version 1.0
  */
 
@@ -27,5 +27,6 @@ public class AsciiArt {
         System.out.println(" /|            (\\  |(");
         System.out.println("^  \\    /__\\    /\\ |");
         System.out.println("    |__|    |__|  -\"");
-    }
-}
+
+    } // main
+} // AsciiArt

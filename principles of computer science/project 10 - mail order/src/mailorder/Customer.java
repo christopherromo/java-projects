@@ -5,7 +5,7 @@
  * This file defines the Customer class, which creates a customer object.
  * 
  * @author Christopher Romo
- * @since 7/26/2022
+ * @since 07/26/2022
  * @version 1.0
  */
 
@@ -120,6 +120,7 @@ public class Customer {
         } else {
             return String.format("Customer Nbr: %d\n%s, %s %s\nBilling Address:\n%s",
                     customerNbr, lastName, firstName, middleName, address.toString());
+
         }
     }
-}
+} // Customer

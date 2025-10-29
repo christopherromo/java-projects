@@ -6,7 +6,7 @@
  * a music album collection.
  * 
  * @author Christopher Romo
- * @since 7/24/2022
+ * @since 07/24/2022
  * @version 1.0
  */
 
@@ -241,5 +241,6 @@ public class Music {
         }
 
         input.close();
-    }
-}
+        
+    } // main
+} // Music

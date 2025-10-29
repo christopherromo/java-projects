@@ -6,7 +6,7 @@
  * through a decision based on user input.
  * 
  * @author Christopher Romo
- * @since 6/25/2022
+ * @since 06/25/2022
  * @version 1.0
  */
 
@@ -219,5 +219,6 @@ public class ShouldIPostThis {
             System.out.println("Invalid choice.");
         }
         input.close();
-    }
-}
+        
+    } // main
+} // ShouldIPostThis

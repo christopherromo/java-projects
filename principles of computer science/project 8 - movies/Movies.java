@@ -5,7 +5,7 @@
  * This file defines the Movies class, which keeps track and manages a movie collection.
  * 
  * @author Christopher Romo
- * @since 7/21/2022
+ * @since 07/21/2022
  * @version 1.0
  */
 
@@ -151,5 +151,6 @@ public class Movies {
         }
 
         input.close();
-    }
-}
+        
+    } // main
+} // Movies

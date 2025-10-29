@@ -5,7 +5,7 @@
  * This file defines the OrderItem class, which creates an OrderItem object.
  * 
  * @author Christopher Romo
- * @since 8/2/2022
+ * @since 08/02/2022
  * @version 1.0
  */
 
@@ -22,4 +22,5 @@ abstract class OrderItem {
 
     // calculates cost
     public abstract double calculateCost();
-}
+
+} // OrderItem

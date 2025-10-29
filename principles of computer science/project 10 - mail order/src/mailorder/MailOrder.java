@@ -6,7 +6,7 @@
  * simulate a mail order system.
  * 
  * @author Christopher Romo
- * @since 7/28/2022
+ * @since 07/28/2022
  * @version 1.0
  */
 
@@ -259,5 +259,6 @@ public class MailOrder {
         } while (response != 6);
 
         input.close();
-    }
-}
+
+    } // main
+} // MailOrder

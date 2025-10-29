@@ -6,7 +6,7 @@
  * creates dog objects, and analyzes their behaviors.
  * 
  * @author Christopher Romo
- * @since 9/14/2022
+ * @since 09/14/2022
  * @version 1.0
  */
 
@@ -18,98 +18,6 @@ import java.io.*;
  * creates dog objects, and analyzes their behaviors.
  */
 public class Dogs {
-	/**
-	 * Main method - reads in dog data from a file, creates dog objects,
-	 * and analyzes their behaviors.
-	 * 
-	 * @param args command line arguments
-	 * @throws IOException if file not found
-	 */
-	public static void main(String[] args) throws IOException {
-		// open file
-		File inputFileName = new File("input/data structures and algorithms input/dogs_input.txt");
-		Scanner inputFile = new Scanner(inputFileName);
-
-		// declare variables
-		int counter = 0;
-		int dogNum = inputFile.nextInt();
-		Dog[] dogs = new Dog[dogNum];
-		ArrayList<Dog> protectiveDogs = new ArrayList<Dog>();
-
-		// fill dog array
-		while (inputFile.hasNext()) {
-			// get dogs information
-			String breed = inputFile.next();
-			String name = inputFile.next();
-			int servingAbility = inputFile.nextInt();
-			int herdingAbility = inputFile.nextInt();
-			int huntingAbility = inputFile.nextInt();
-			int protectingAbility = inputFile.nextInt();
-
-			// add dog and appropriate information
-			switch (breed) {
-				case "BorderCollie":
-					dogs[counter] = new BorderCollie(name, servingAbility, herdingAbility, protectingAbility);
-					counter++;
-					break;
-
-				case "Boxer":
-					dogs[counter] = new Boxer(name, servingAbility, herdingAbility, huntingAbility, protectingAbility);
-					counter++;
-					break;
-
-				case "GermanShepherd":
-					dogs[counter] = new GermanSheppard(name, servingAbility, herdingAbility, protectingAbility);
-					counter++;
-					break;
-
-				case "GoldenRetriever":
-					dogs[counter] = new GoldenRetriever(name, servingAbility, huntingAbility);
-					counter++;
-					break;
-
-				default:
-					break;
-			}
-		}
-		inputFile.close();
-
-		// print the dogs data using methods
-		System.out.println("DOGS THAT PROTECT\n"
-				+ "--------------------------------------------------------------------------------\n"
-				+ "Dog	Protection	Temperament				Breed\n"
-				+ "--------------------------------------------------------------------------------");
-
-		// find protective dogs & print
-		protectiveDogs = findProtectors(dogs);
-
-		for (Dog dog : protectiveDogs) {
-			String result = String.format("%s	%d		%s		%s", dog.getName(), ((Protector) dog).protect(),
-					dog.temperament(), dog.getBreed());
-			System.out.println(result);
-		}
-
-		// find most protective dog
-		System.out.println("\n"
-				+ "\n"
-				+ "BEST PROTECTING DOG\n"
-				+ "----------------------");
-		Dog bestProtector = findBestProtector(protectiveDogs);
-		String protectorLabel = String.format("Name: %s\nBreed: %s\nTemperament: %s\nProtecting Ability %d",
-				bestProtector.getName(), bestProtector.getBreed(), bestProtector.temperament(),
-				((Protector) bestProtector).protect());
-		System.out.println(protectorLabel);
-
-		// find most common ability
-		System.out.println("\n"
-				+ "\n"
-				+ "ABILITY MOST COMMON FOR THE DOGS\n"
-				+ "--------------------------------");
-		String mostCommon = findMostCommonAbility(dogs);
-		System.out.println(mostCommon + " is the most ability among the given dogs");
-
-	} // main
-
 	/**
 	 * find dogs that are protectors and return them in an array list
 	 * 
@@ -205,8 +113,100 @@ public class Dogs {
 		} else {
 			return "";
 		}
-
+		
 	} // findMostCommonAbility
+
+	/**
+	 * Main method - reads in dog data from a file, creates dog objects,
+	 * and analyzes their behaviors.
+	 * 
+	 * @param args command line arguments
+	 * @throws IOException if file not found
+	 */
+	public static void main(String[] args) throws IOException {
+		// open file
+		File inputFileName = new File("input/data structures and algorithms input/dogs_input.txt");
+		Scanner inputFile = new Scanner(inputFileName);
+
+		// declare variables
+		int counter = 0;
+		int dogNum = inputFile.nextInt();
+		Dog[] dogs = new Dog[dogNum];
+		ArrayList<Dog> protectiveDogs = new ArrayList<Dog>();
+
+		// fill dog array
+		while (inputFile.hasNext()) {
+			// get dogs information
+			String breed = inputFile.next();
+			String name = inputFile.next();
+			int servingAbility = inputFile.nextInt();
+			int herdingAbility = inputFile.nextInt();
+			int huntingAbility = inputFile.nextInt();
+			int protectingAbility = inputFile.nextInt();
+
+			// add dog and appropriate information
+			switch (breed) {
+				case "BorderCollie":
+					dogs[counter] = new BorderCollie(name, servingAbility, herdingAbility, protectingAbility);
+					counter++;
+					break;
+
+				case "Boxer":
+					dogs[counter] = new Boxer(name, servingAbility, herdingAbility, huntingAbility, protectingAbility);
+					counter++;
+					break;
+
+				case "GermanShepherd":
+					dogs[counter] = new GermanSheppard(name, servingAbility, herdingAbility, protectingAbility);
+					counter++;
+					break;
+
+				case "GoldenRetriever":
+					dogs[counter] = new GoldenRetriever(name, servingAbility, huntingAbility);
+					counter++;
+					break;
+
+				default:
+					break;
+			}
+		}
+		inputFile.close();
+
+		// print the dogs data using methods
+		System.out.println("DOGS THAT PROTECT\n"
+				+ "--------------------------------------------------------------------------------\n"
+				+ "Dog	Protection	Temperament				Breed\n"
+				+ "--------------------------------------------------------------------------------");
+
+		// find protective dogs & print
+		protectiveDogs = findProtectors(dogs);
+
+		for (Dog dog : protectiveDogs) {
+			String result = String.format("%s	%d		%s		%s", dog.getName(), ((Protector) dog).protect(),
+					dog.temperament(), dog.getBreed());
+			System.out.println(result);
+		}
+
+		// find most protective dog
+		System.out.println("\n"
+				+ "\n"
+				+ "BEST PROTECTING DOG\n"
+				+ "----------------------");
+		Dog bestProtector = findBestProtector(protectiveDogs);
+		String protectorLabel = String.format("Name: %s\nBreed: %s\nTemperament: %s\nProtecting Ability %d",
+				bestProtector.getName(), bestProtector.getBreed(), bestProtector.temperament(),
+				((Protector) bestProtector).protect());
+		System.out.println(protectorLabel);
+
+		// find most common ability
+		System.out.println("\n"
+				+ "\n"
+				+ "ABILITY MOST COMMON FOR THE DOGS\n"
+				+ "--------------------------------");
+		String mostCommon = findMostCommonAbility(dogs);
+		System.out.println(mostCommon + " is the most ability among the given dogs");
+
+	} // main
 } // Dogs
 
 /**
@@ -312,8 +312,8 @@ class BorderCollie extends Dog implements Server, Herder, Protector {
 	@Override
 	public int protect() {
 		return protectingAbility;
-	}
 
+	}
 } // BorderCollie
 
 /**
@@ -368,8 +368,8 @@ class Boxer extends Dog implements Server, Herder, Hunter, Protector {
 	@Override
 	public int protect() {
 		return protectingAbility;
-	}
 
+	}
 } // Boxer
 
 /**
@@ -416,8 +416,8 @@ class GermanSheppard extends Dog implements Server, Herder, Protector {
 	@Override
 	public int protect() {
 		return protectingAbility;
-	}
 
+	}
 } // GermanSheppard
 
 /**
@@ -456,6 +456,6 @@ class GoldenRetriever extends Dog implements Server, Hunter {
 	@Override
 	public int hunt() {
 		return huntingAbility;
-	}
 
+	}
 } // GoldenRetriever

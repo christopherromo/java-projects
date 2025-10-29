@@ -6,7 +6,7 @@
  * a music album collection (now with file input/output).
  * 
  * @author Christopher Romo
- * @since 7/31/2022
+ * @since 07/31/2022
  * @version 1.0
  */
 
@@ -306,6 +306,7 @@ public class MusicWithFiles {
             // exit program
             System.out.println("Goodbye!");
             input.close();
+
         }
-    }
-}
+    } // main
+} // MusicWithFiles

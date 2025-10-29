@@ -5,7 +5,7 @@
  * This file defines the Album class, which creates an album object.
  * 
  * @author Christopher Romo
- * @since 7/31/2022
+ * @since 07/31/2022
  * @version 1.0
  */
 
@@ -72,5 +72,6 @@ public class Album {
     @Override
     public String toString() {
         return String.format("Title:  %s\nArtist: %s\nYear:   %s", title, artist, year);
+
     }
-}
+} // Album

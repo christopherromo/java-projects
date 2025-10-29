@@ -6,7 +6,7 @@
  * and decrypt messages using the Caesar cipher.
  * 
  * @author Christopher Romo
- * @since 7/19/2022
+ * @since 07/19/2022
  * @version 1.0
  */
 
@@ -205,7 +205,7 @@ public class Decrypter {
     }
 
     /**
-     * Main method - allows you to encrypt and decrypt messages
+     * Main method - allows you to encrypt and decrypt messages.
      * 
      * @param args command line arguments
      */
@@ -251,5 +251,6 @@ public class Decrypter {
         }
 
         input.close();
-    }
-}
+
+    } // main
+} // Decrypter

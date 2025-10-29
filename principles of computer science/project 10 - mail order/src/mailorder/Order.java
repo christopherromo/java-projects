@@ -5,7 +5,7 @@
  * This file defines the Order class, which creates an order object.
  * 
  * @author Christopher Romo
- * @since 7/26/2022
+ * @since 07/26/2022
  * @version 1.0
  */
 
@@ -89,5 +89,6 @@ public class Order {
                 "Order Total: ", sum));
 
         return stringBuilder.toString();
+        
     }
-}
+} // Order

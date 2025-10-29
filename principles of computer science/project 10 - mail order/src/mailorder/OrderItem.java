@@ -5,7 +5,7 @@
  * This file defines the OrderItem class, which creates an order item object.
  * 
  * @author Christopher Romo
- * @since 7/26/2022
+ * @since 07/26/2022
  * @version 1.0
  */
 
@@ -52,5 +52,6 @@ public class OrderItem {
     @Override
     public String toString() {
         return String.format("\n%-30s  $%7.2f*", description, cost);
+        
     }
-}
+} // OrderItem

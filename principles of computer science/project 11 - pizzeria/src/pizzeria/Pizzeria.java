@@ -5,7 +5,7 @@
  * This file defines the Pizzeria class, which takes a customer's order.
  * 
  * @author Christopher Romo
- * @since 8/2/2022
+ * @since 08/02/2022
  * @version 1.0
  */
 
@@ -115,5 +115,6 @@ public class Pizzeria {
 
         System.out.println("Thank you for coming!");
         input.close();
-    }
-}
+        
+    } // main
+} // Pizzeria

@@ -5,7 +5,7 @@
  * This file defines the Album class, which creates an album object.
  * 
  * @author Christopher Romo
- * @since 7/24/2022
+ * @since 07/24/2022
  * @version 1.0
  */
 
@@ -66,5 +66,6 @@ public class Album {
         System.out.println("Title:  " + title);
         System.out.println("Artist: " + artist);
         System.out.println("Year:   " + year);
+        
     }
-}
+} // Album

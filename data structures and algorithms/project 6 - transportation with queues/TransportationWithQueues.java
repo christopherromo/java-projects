@@ -92,7 +92,6 @@ public class TransportationWithQueues {
 		readPlaneFile.close();
 
 	} // main
-
 } // TransportationWithQueues
 
 /**
@@ -280,8 +279,8 @@ class Truck implements Comparable<Truck> {
 			return 0;
 		} else {
 			return 1;
-		}
 
+		}
 	}
 } // Truck
 
@@ -449,8 +448,8 @@ class Taxiways {
 
 	public Plane removePlaneFromBasicTaxiway() {
 		return basicTaxiway.poll();
-	}
 
+	}
 } // Taxiways
 
 /**
@@ -478,8 +477,8 @@ class Runway {
 
 	public Plane removePlaneFromRunway() {
 		return runway.poll();
-	}
 
+	}
 } // Runway
 
 /**

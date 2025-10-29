@@ -5,7 +5,7 @@
  * This file defines the Pizza class, which creates a pizza object.
  * 
  * @author Christopher Romo
- * @since 8/2/2022
+ * @since 08/02/2022
  * @version 1.0
  */
 
@@ -58,5 +58,6 @@ public class Pizza extends OrderItem {
         result = pizza.toString();
 
         return result;
+        
     }
-}
+} // Pizza

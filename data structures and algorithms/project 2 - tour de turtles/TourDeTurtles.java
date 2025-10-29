@@ -6,7 +6,7 @@
  * creates SeaTurtle objects, and prints out their details along with tour information.
  * 
  * @author Christopher Romo
- * @since 9/8/2022
+ * @since 09/08/2022
  * @version 1.0
  */
 
@@ -143,6 +143,7 @@ class SeaTurtle {
     // behavior
     public String threatsToSurvival() {
         return "I am a turtle!";
+
     }
 } // SeaTurtle
 
@@ -166,6 +167,7 @@ class Hawksbill extends SeaTurtle {
     @Override
     public String threatsToSurvival() {
         return "Harvesting of their shell";
+
     }
 } // Hawksbill
 
@@ -189,6 +191,7 @@ class Loggerhead extends SeaTurtle {
     @Override
     public String threatsToSurvival() {
         return "Loss of nesting habitat";
+
     }
 } // Loggerhead
 
@@ -212,6 +215,7 @@ class GreenTurtle extends SeaTurtle {
     @Override
     public String threatsToSurvival() {
         return "Commercial harvest for eggs & food";
+
     }
 } // GreenTurtle
 
@@ -235,6 +239,7 @@ class Leatherback extends SeaTurtle {
     @Override
     public String threatsToSurvival() {
         return "Plastic bag mistaken for jellyfish";
+
     }
 } // Leatherback
 
@@ -299,6 +304,7 @@ class Tour {
             String result = String.format("%-15s	---%.1f", turtlesToTrack[i].getName(),
                     turtlesToTrack[i].getMilesTraveled());
             System.out.println(result);
+
         }
     }
 } // Tour
