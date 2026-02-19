@@ -2,10 +2,10 @@
 /**
  * MessageDecoder.java
  * 
- * This file defines the MessageDecoder class, which decodes secret messages
+ * this file defines the MessageDecoder class, which decodes secret messages
  * using a decoding machine with a key grid.
  * 
- * @author Christopher Romo
+ * @author christopher romo
  * @since 11/03/2022
  * @version 1.0
  */
@@ -14,12 +14,12 @@ import java.util.*;
 import java.io.*;
 
 /**
- * The MessageDecoder class contains a main method that decodes secret messages
+ * the MessageDecoder class contains methods that decode secret messages
  * using a decoding machine with a key grid.
  */
 public class MessageDecoder {
 	/**
-	 * fills a queue with KeyGridElements from a file
+	 * fills a queue with KeyGridElements from a file.
 	 * 
 	 * @param aQueue      the queue to be filled
 	 * @param messageFile the scanner for the message file
@@ -39,12 +39,11 @@ public class MessageDecoder {
 			// create new tile and add to queue
 			gridTile = new KeyGridElement(row, column);
 			aQueue.offer(gridTile);
-
 		}
 	} // fillQueue
 
 	/**
-	 * Main method - decodes secret messages using a decoding machine with a key
+	 * main method - decodes secret messages using a decoding machine with a key
 	 * grid.
 	 * 
 	 * @param args command line arguments
@@ -110,12 +109,11 @@ public class MessageDecoder {
 		keyGridScanner.close();
 		messageOneScanner.close();
 		messageTwoScanner.close();
-
 	} // main
 } // MessageDecoder
 
 /**
- * The KeyGridElement class creates a key grid element object.
+ * the KeyGridElement class creates a key grid element object.
  */
 class KeyGridElement {
 	// instance variables
@@ -123,7 +121,7 @@ class KeyGridElement {
 	private int column;
 
 	/**
-	 * constructor that creates a key grid element object
+	 * constructor that creates a key grid element object.
 	 * 
 	 * @param row
 	 * @param column
@@ -140,12 +138,11 @@ class KeyGridElement {
 
 	public int getColumn() {
 		return column;
-
 	}
 } // KeyGridElement
 
 /**
- * The DecodingMachine class creates a decoding machine object.
+ * the DecodingMachine class creates a decoding machine object.
  */
 class DecodingMachine {
 	// instance variables
@@ -154,7 +151,7 @@ class DecodingMachine {
 	private int numCols;
 
 	/**
-	 * constructor that creates a decoding machine object
+	 * constructor that creates a decoding machine object.
 	 * 
 	 * @param numRows
 	 * @param numCols
@@ -169,7 +166,7 @@ class DecodingMachine {
 	// behavior
 
 	/**
-	 * fills the 2D array with characters from an iterator
+	 * fills the 2D array with characters from an iterator.
 	 * 
 	 * @param charIterator iterator of characters
 	 */
@@ -184,7 +181,7 @@ class DecodingMachine {
 	}
 
 	/**
-	 * decodes a message using an iterator of KeyGridElements
+	 * decodes a message using an iterator of KeyGridElements.
 	 * 
 	 * @param msgIterator iterator of KeyGridElements
 	 * @return iterator of decoded characters
@@ -210,7 +207,7 @@ class DecodingMachine {
 	}
 
 	/**
-	 * prints the key grid
+	 * prints the key grid.
 	 */
 	public void printKeyGrid() {
 		for (int i = 0; i < numRows; i++) {
@@ -218,7 +215,6 @@ class DecodingMachine {
 				System.out.print(keyGrid[i][k]);
 			}
 			System.out.println();
-
 		}
 	}
 } // DecodingMachine

@@ -2,10 +2,10 @@
 /**
  * LoginCreator.java
  * 
- * This file defines the LoginCreator class, which prompts input
+ * this file defines the LoginCreator class, which prompts input
  * for a username and password and checks if they are valid.
  * 
- * @author Christopher Romo
+ * @author christopher romo
  * @since 06/27/2022
  * @version 1.0
  */
@@ -13,12 +13,12 @@
 import java.util.*;
 
 /**
- * The LoginCreator class contains a main method that prompts input
+ * the LoginCreator class contains a main method that prompts input
  * for a username and password and checks if they are valid.
  */
 public class LoginCreator {
     /**
-     * Main method - prompts input for a username and password and checks if they
+     * main method - prompts input for a username and password and checks if they
      * are valid.
      * 
      * @param args command line arguments
@@ -90,6 +90,5 @@ public class LoginCreator {
         }
 
         input.close();
-
     } // main
 } // LoginCreator

@@ -2,9 +2,9 @@
 /**
  * Order.java
  * 
- * This file defines the Order class, which creates an order object.
+ * this file defines the Order class, which creates an order object.
  * 
- * @author Christopher Romo
+ * @author christopher romo
  * @since 07/26/2022
  * @version 1.0
  */
@@ -14,7 +14,7 @@ package src.mailorder;
 import java.util.ArrayList;
 
 /**
- * The Order class creates an order object.
+ * the Order class creates an order object.
  */
 public class Order {
     // instance variables
@@ -26,7 +26,7 @@ public class Order {
     private static int nbrOfOrders;
 
     /**
-     * constructor that creates an order object
+     * constructor that creates an order object.
      * 
      * @param customer
      * @param shippingAddress
@@ -61,7 +61,7 @@ public class Order {
     }
 
     /**
-     * adds an item to the order
+     * adds an item to the order.
      * 
      * @param item the item to add
      */
@@ -89,6 +89,5 @@ public class Order {
                 "Order Total: ", sum));
 
         return stringBuilder.toString();
-        
     }
 } // Order

@@ -2,10 +2,10 @@
 /**
  * MusicWithFiles.java
  * 
- * This file defines the MusicWithFiles class, which allows you to manage
+ * this file defines the MusicWithFiles class, which allows you to manage
  * a music album collection (now with file input/output).
  * 
- * @author Christopher Romo
+ * @author christopher romo
  * @since 07/31/2022
  * @version 1.0
  */
@@ -17,12 +17,12 @@ import java.io.*;
 import java.util.ArrayList;
 
 /**
- * The MusicWithFiles class contains a main method that allows you to manage
+ * the MusicWithFiles class contains methods that allow you to manage
  * a music album collection (now with file input/output).
  */
 public class MusicWithFiles {
     /**
-     * displays the menu
+     * displays the menu.
      */
     public static void displayMenu() {
         System.out.println("Please make a selection:\n" +
@@ -38,7 +38,7 @@ public class MusicWithFiles {
     }
 
     /**
-     * removes leading spaces from a phrase
+     * removes leading spaces from a phrase.
      * 
      * @param phrase the phrase to remove leading spaces from
      * @return the phrase without leading spaces
@@ -47,11 +47,12 @@ public class MusicWithFiles {
         while (phrase.length() > 0 && phrase.charAt(0) == ' ') {
             phrase = phrase.substring(1);
         }
+
         return phrase;
     }
 
     /**
-     * adds an album to the collection
+     * adds an album to the collection.
      * 
      * @param input  input scanner
      * @param albums array list of albums
@@ -71,6 +72,7 @@ public class MusicWithFiles {
                 isValidYear = year >= 1877 && year <= 2020;
             }
         }
+
         if (input.hasNextLine())
             input.nextLine();
 
@@ -78,7 +80,7 @@ public class MusicWithFiles {
     }
 
     /**
-     * changes an existing album in the collection
+     * changes an existing album in the collection.
      * 
      * @param input  input scanner
      * @param albums array list of albums
@@ -100,6 +102,7 @@ public class MusicWithFiles {
                 isValidYear = year >= 1877 && year <= 2020;
             }
         }
+
         if (input.hasNextLine())
             input.nextLine();
 
@@ -113,7 +116,7 @@ public class MusicWithFiles {
     }
 
     /**
-     * deletes an album from the collection
+     * deletes an album from the collection.
      * 
      * @param input  input scanner
      * @param albums array list of albums
@@ -131,7 +134,7 @@ public class MusicWithFiles {
     }
 
     /**
-     * prints the entire collection
+     * prints the entire collection.
      * 
      * @param albums array list of albums
      */
@@ -142,7 +145,7 @@ public class MusicWithFiles {
     }
 
     /**
-     * prints the albums by artist
+     * prints the albums by artist.
      * 
      * @param input  input scanner
      * @param albums array list of albums
@@ -159,7 +162,7 @@ public class MusicWithFiles {
     }
 
     /**
-     * prints the albums by year
+     * prints the albums by year.
      * 
      * @param input  input scanner
      * @param albums array list of albums
@@ -167,6 +170,7 @@ public class MusicWithFiles {
     public static void printByYear(Scanner input, ArrayList<Album> albums) {
         System.out.println("Please enter a year: ");
         int year = input.nextInt();
+
         if (input.hasNextLine())
             input.nextLine();
 
@@ -178,7 +182,7 @@ public class MusicWithFiles {
     }
 
     /**
-     * reads in a file and adds to array list
+     * reads in a file and adds to array list.
      * 
      * @param input  input scanner
      * @param albums array list of albums
@@ -212,7 +216,7 @@ public class MusicWithFiles {
     }
 
     /**
-     * outputs the current users library to a new file
+     * outputs the current users library to a new file.
      * 
      * @param input  input scanner
      * @param albums array list of albums
@@ -238,7 +242,7 @@ public class MusicWithFiles {
     }
 
     /**
-     * Main method - allows you to manage a music album collection (now with file
+     * main method - allows you to manage a music album collection (now with file
      * input/output).
      * 
      * @param args command line arguments
@@ -261,35 +265,27 @@ public class MusicWithFiles {
                 case 1:
                     addAlbum(input, albums);
                     break;
-
                 case 2:
                     changeAlbum(input, albums);
                     break;
-
                 case 3:
                     deleteAlbum(input, albums);
                     break;
-
                 case 4:
                     printCollection(albums);
                     break;
-
                 case 5:
                     printByArtist(input, albums);
                     break;
-
                 case 6:
                     printByYear(input, albums);
                     break;
-
                 case 7:
                     readInFile(input, albums);
                     break;
-
                 case 8:
                     outputFile(input, albums);
                     break;
-
                 default:
                     System.out.println("Invalid response, try again.");
                     break;
@@ -306,7 +302,6 @@ public class MusicWithFiles {
             // exit program
             System.out.println("Goodbye!");
             input.close();
-
         }
     } // main
 } // MusicWithFiles

@@ -2,9 +2,9 @@
 /**
  * Beverage.java
  * 
- * This file defines the Beverage class, which creates a beverage object.
+ * this file defines the Beverage class, which creates a beverage object.
  * 
- * @author Christopher Romo
+ * @author christopher romo
  * @since 08/02/2022
  * @version 1.0
  */
@@ -14,7 +14,7 @@ package src.pizzeria;
 import java.util.Scanner;
 
 /**
- * The Beverage class creates a beverage object.
+ * the Beverage class creates a beverage object.
  */
 public class Beverage extends OrderItem {
     // instance variables
@@ -45,6 +45,5 @@ public class Beverage extends OrderItem {
     @Override
     public String toString() {
         return String.format("%-30s%10.2f\n", nameToTitleCase(), calculateCost());
-        
     }
 } // Beverage

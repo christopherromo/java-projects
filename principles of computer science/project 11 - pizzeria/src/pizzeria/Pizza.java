@@ -2,9 +2,9 @@
 /**
  * Pizza.java
  * 
- * This file defines the Pizza class, which creates a pizza object.
+ * this file defines the Pizza class, which creates a pizza object.
  * 
- * @author Christopher Romo
+ * @author christopher romo
  * @since 08/02/2022
  * @version 1.0
  */
@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
- * The Pizza class creates a pizza object.
+ * the Pizza class creates a pizza object.
  */
 public class Pizza extends OrderItem {
     // instance variables
@@ -58,6 +58,5 @@ public class Pizza extends OrderItem {
         result = pizza.toString();
 
         return result;
-        
     }
 } // Pizza

@@ -2,10 +2,10 @@
 /**
  * CompoundInterest.java
  * 
- * This file defines the CompoundInterest class, which calculates various
+ * this file defines the CompoundInterest class, which calculates various
  * aspects of compound interest based on user input.
  * 
- * @author Christopher Romo
+ * @author christopher romo
  * @since 06/20/2022
  * @version 1.0
  */
@@ -14,7 +14,7 @@ import java.util.*;
 import java.text.DecimalFormat;
 
 /**
- * The CompoundInterest class contains a main method that calculates
+ * the CompoundInterest class contains a main method that calculates
  * various aspects of compound interest based on user input.
  */
 public class CompoundInterest {
@@ -22,7 +22,7 @@ public class CompoundInterest {
     private static final DecimalFormat df = new DecimalFormat("0.00");
 
     /**
-     * Main method - calculates compound interest based on user input.
+     * main method - calculates compound interest based on user input.
      * 
      * @param args command line arguments
      */
@@ -75,6 +75,5 @@ public class CompoundInterest {
         System.out.println("Future value of your total investment: " + df.format(totalInvestment));
 
         input.close();
-
     } // main
 } // CompoundInterest

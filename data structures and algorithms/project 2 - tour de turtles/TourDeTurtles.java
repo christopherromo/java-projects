@@ -2,10 +2,10 @@
 /**
  * TourDeTurtles.java
  * 
- * This file defines the TourDeTurtles class, which reads in turtle data from a file,
+ * this file defines the TourDeTurtles class, which reads in turtle data from a file,
  * creates SeaTurtle objects, and prints out their details along with tour information.
  * 
- * @author Christopher Romo
+ * @author christopher romo
  * @since 09/08/2022
  * @version 1.0
  */
@@ -14,13 +14,13 @@ import java.util.*;
 import java.io.*;
 
 /**
- * The TourDeTurtles class contains a main method that reads in turtle data from
+ * the TourDeTurtles class contains a main method that reads in turtle data from
  * a file, creates SeaTurtle objects, and prints out their details along with
  * tour information.
  */
 public class TourDeTurtles {
     /**
-     * Main method - reads in turtle data from a file, creates SeaTurtle objects,
+     * main method - reads in turtle data from a file, creates SeaTurtle objects,
      * and prints out their details along with tour information.
      * 
      * @param args command line arguments
@@ -49,22 +49,18 @@ public class TourDeTurtles {
                     turtles[counter] = new Hawksbill(name, daysTracked, milesTraveled, tourYear);
                     counter++;
                     break;
-
                 case "loggerhead":
                     turtles[counter] = new Loggerhead(name, daysTracked, milesTraveled, tourYear);
                     counter++;
                     break;
-
                 case "greenturtle":
                     turtles[counter] = new GreenTurtle(name, daysTracked, milesTraveled, tourYear);
                     counter++;
                     break;
-
                 case "leatherback":
                     turtles[counter] = new Leatherback(name, daysTracked, milesTraveled, tourYear);
                     counter++;
                     break;
-
                 default:
                     break;
             }
@@ -87,12 +83,11 @@ public class TourDeTurtles {
         Tour firstTour = new Tour(2021);
         firstTour.setupTour(turtles);
         firstTour.printTourDetails();
-
     } // main
 } // TourDeTurtles
 
 /**
- * The SeaTurtle class creates a sea turtle object.
+ * the SeaTurtle class creates a sea turtle object.
  */
 class SeaTurtle {
     // instance variables
@@ -103,7 +98,7 @@ class SeaTurtle {
     private int tourYear;
 
     /**
-     * constructor that creates a sea turtle object
+     * constructor that creates a sea turtle object.
      * 
      * @param type
      * @param name
@@ -143,16 +138,15 @@ class SeaTurtle {
     // behavior
     public String threatsToSurvival() {
         return "I am a turtle!";
-
     }
 } // SeaTurtle
 
 /**
- * The Hawksbill class creates a hawksbill turtle object.
+ * the Hawksbill class creates a hawksbill turtle object.
  */
 class Hawksbill extends SeaTurtle {
     /**
-     * constructor that creates a hawksbill turtle object
+     * constructor that creates a hawksbill turtle object.
      * 
      * @param name
      * @param daysTracked
@@ -167,16 +161,15 @@ class Hawksbill extends SeaTurtle {
     @Override
     public String threatsToSurvival() {
         return "Harvesting of their shell";
-
     }
 } // Hawksbill
 
 /**
- * The Loggerhead class creates a loggerhead turtle object.
+ * the Loggerhead class creates a loggerhead turtle object.
  */
 class Loggerhead extends SeaTurtle {
     /**
-     * constructor that creates a loggerhead turtle object
+     * constructor that creates a loggerhead turtle object.
      * 
      * @param name
      * @param daysTracked
@@ -191,16 +184,15 @@ class Loggerhead extends SeaTurtle {
     @Override
     public String threatsToSurvival() {
         return "Loss of nesting habitat";
-
     }
 } // Loggerhead
 
 /**
- * The GreenTurtle class creates a green turtle object.
+ * the GreenTurtle class creates a green turtle object.
  */
 class GreenTurtle extends SeaTurtle {
     /**
-     * constructor that creates a green turtle object
+     * constructor that creates a green turtle object.
      * 
      * @param name
      * @param daysTracked
@@ -215,16 +207,15 @@ class GreenTurtle extends SeaTurtle {
     @Override
     public String threatsToSurvival() {
         return "Commercial harvest for eggs & food";
-
     }
 } // GreenTurtle
 
 /**
- * The Leatherback class creates a leatherback turtle object.
+ * the Leatherback class creates a leatherback turtle object.
  */
 class Leatherback extends SeaTurtle {
     /**
-     * constructor that creates a leatherback turtle object
+     * constructor that creates a leatherback turtle object.
      * 
      * @param name
      * @param daysTracked
@@ -239,12 +230,11 @@ class Leatherback extends SeaTurtle {
     @Override
     public String threatsToSurvival() {
         return "Plastic bag mistaken for jellyfish";
-
     }
 } // Leatherback
 
 /**
- * The Tour class creates a tour object.
+ * the Tour class creates a tour object.
  */
 class Tour {
     // instance variables
@@ -254,7 +244,7 @@ class Tour {
     private SeaTurtle[] turtlesToTrack;
 
     /**
-     * constructor that creates a tour object
+     * constructor that creates a tour object.
      * 
      * @param tourYear
      */
@@ -265,7 +255,7 @@ class Tour {
     // behavior
 
     /**
-     * sets up the tour for the given year
+     * sets up the tour for the given year.
      * 
      * @param turtles
      */
@@ -290,7 +280,7 @@ class Tour {
     }
 
     /**
-     * prints the tour details
+     * prints the tour details.
      */
     public void printTourDetails() {
         System.out.println("-----------------------------------\n" +
@@ -304,7 +294,6 @@ class Tour {
             String result = String.format("%-15s	---%.1f", turtlesToTrack[i].getName(),
                     turtlesToTrack[i].getMilesTraveled());
             System.out.println(result);
-
         }
     }
 } // Tour

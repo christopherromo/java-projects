@@ -2,10 +2,10 @@
 /**
  * TreeOfLife.java
  * 
- * This file defines the TreeOfLife class, which reads in parrot objects from a file,
+ * this file defines the TreeOfLife class, which reads in parrot objects from a file,
  * adds them to a binary tree, and traverses the tree to print a song and names.
  * 
- * @author Christopher Romo
+ * @author christopher romo
  * @since 11/29/2022
  * @version 1.0
  */
@@ -14,13 +14,13 @@ import java.util.*;
 import java.io.*;
 
 /**
- * The TreeOfLife class contains a main method that reads in parrot objects from
- * a file,adds them to a binary tree, and traverses the tree to print a song and
- * names.
+ * the TreeOfLife class contains a main method that reads in parrot objects from
+ * a file, adds them to a binary tree, and traverses the tree to print a song
+ * and names.
  */
 public class TreeOfLife {
 	/**
-	 * Main method - reads in parrot objects from a file, adds them to a binary
+	 * main method - reads in parrot objects from a file, adds them to a binary
 	 * tree, and traverses the tree to print a song and names.
 	 * 
 	 * @param args command line arguments
@@ -52,12 +52,11 @@ public class TreeOfLife {
 		// print song & visit leaves
 		theTreeOfLife.levelOrder();
 		theTreeOfLife.visitLeaves();
-
 	} // main
 } // TreeOfLife
 
 /**
- * The Parrot class creates a parrot object.
+ * the Parrot class creates a parrot object.
  */
 class Parrot implements Comparable<Parrot> {
 	// instance variables
@@ -66,7 +65,7 @@ class Parrot implements Comparable<Parrot> {
 	private String songPhrase;
 
 	/**
-	 * constructor that creates a parrot object
+	 * constructor that creates a parrot object.
 	 * 
 	 * @param ID
 	 * @param name
@@ -96,20 +95,19 @@ class Parrot implements Comparable<Parrot> {
 			return 0;
 		} else {
 			return 1;
-
 		}
 	}
 } // Parrot
 
 /**
- * The BinaryTree class defines a binary tree data structure.
+ * the BinaryTree class defines a binary tree data structure.
  */
 class BinaryTree {
 	// instance variables
 	private TreeNode root;
 
 	/**
-	 * constructor that creates an empty binary tree
+	 * constructor that creates an empty binary tree.
 	 */
 	public BinaryTree() {
 		root = null;
@@ -191,21 +189,16 @@ class BinaryTree {
 		}
 	}
 
-	/**
-	 * The TreeNode represents a single node in the binary tree.
-	 */
 	private static class TreeNode {
-		// declare variables
+		// instance variables
 		private Parrot parrot;
 		private TreeNode left;
 		private TreeNode right;
 
-		// constructor
 		public TreeNode(Parrot parrot) {
 			this.parrot = parrot;
 			left = null;
 			right = null;
-
 		}
 	}
 } // BinaryTree

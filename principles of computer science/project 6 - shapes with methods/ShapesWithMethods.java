@@ -2,10 +2,10 @@
 /**
  * ShapesWithMethods.java
  * 
- * This file defines the Shapes class, which allows you to draw shapes
+ * this file defines the Shapes class, which allows you to draw shapes
  * to the console based on user input (now with methods).
  * 
- * @author Christopher Romo
+ * @author christopher romo
  * @since 07/08/2022
  * @version 1.0
  */
@@ -13,12 +13,12 @@
 import java.util.*;
 
 /**
- * The ShapesWithMethods class contains a main method that allows you to draw
+ * the ShapesWithMethods class contains methods that allow you to draw
  * shapes to the console based on user input (now with methods).
  */
 public class ShapesWithMethods {
     /**
-     * prompts menu of choices
+     * prompts menu of choices.
      */
     public static void promptMenu() {
         System.out.println("Pick a shape to draw: ");
@@ -32,7 +32,7 @@ public class ShapesWithMethods {
     }
 
     /**
-     * draws a right triangle
+     * draws a right triangle.
      * 
      * @param s size
      */
@@ -46,7 +46,7 @@ public class ShapesWithMethods {
     }
 
     /**
-     * draws an upside-down right triangle
+     * draws an upside-down right triangle.
      * 
      * @param s size
      */
@@ -60,7 +60,7 @@ public class ShapesWithMethods {
     }
 
     /**
-     * draws an isosceles triangle
+     * draws an isosceles triangle.
      * 
      * @param s size
      */
@@ -78,7 +78,7 @@ public class ShapesWithMethods {
     }
 
     /**
-     * draws an inverted isosceles triangle
+     * draws an inverted isosceles triangle.
      * 
      * @param s size
      */
@@ -95,7 +95,7 @@ public class ShapesWithMethods {
     }
 
     /**
-     * draws a diamond
+     * draws a diamond.
      * 
      * @param s size
      */
@@ -116,7 +116,7 @@ public class ShapesWithMethods {
     }
 
     /**
-     * draws a hourglass
+     * draws a hourglass.
      * 
      * @param s size
      */
@@ -137,7 +137,7 @@ public class ShapesWithMethods {
     }
 
     /**
-     * Main method - allows you to draw shapes to the console based on user input
+     * main method - allows you to draw shapes to the console based on user input
      * (now with methods).
      * 
      * @param args command line arguments
@@ -156,46 +156,39 @@ public class ShapesWithMethods {
                     int sizeRT = input.nextInt();
                     drawRightTriangle(sizeRT);
                     break;
-
                 case 2:
                     System.out.println("You have chosen an Upside-down Right Triangle.");
                     System.out.println("Enter the size: ");
                     int sizeUDRT = input.nextInt();
                     drawUpsideDownRightTriangle(sizeUDRT);
                     break;
-
                 case 3:
                     System.out.println("You have chosen an Isosceles Triangle.");
                     System.out.println("Enter the size: ");
                     int sizeIT = input.nextInt();
                     drawIsoscelesTriangle(sizeIT);
                     break;
-
                 case 4:
                     System.out.println("You have chosen an Upside-down Isosceles Triangle.");
                     System.out.println("Enter the size: ");
                     int sizeUDIT = input.nextInt();
                     drawInvertedIsoscelesTriangle(sizeUDIT);
                     break;
-
                 case 5:
                     System.out.println("You have chosen a Diamond.");
                     System.out.println("Enter the size: ");
                     int sizeD = input.nextInt();
                     drawDiamond(sizeD);
                     break;
-
                 case 6:
                     System.out.println("You have chosen an Hourglass.");
                     System.out.println("Enter the size: ");
                     int sizeH = input.nextInt();
                     drawHourglass(sizeH);
                     break;
-
                 default:
                     System.out.println("Invalid choice, choose again.");
                     break;
-
             }
             promptMenu();
             response = input.nextInt();
@@ -203,6 +196,5 @@ public class ShapesWithMethods {
         System.out.println("You have chosen to quit. Goodbye.");
 
         input.close();
-        
     } // main
 } // ShapesWithMethods

@@ -2,9 +2,9 @@
 /**
  * Customer.java
  * 
- * This file defines the Customer class, which creates a customer object.
+ * this file defines the Customer class, which creates a customer object.
  * 
- * @author Christopher Romo
+ * @author christopher romo
  * @since 07/26/2022
  * @version 1.0
  */
@@ -12,7 +12,7 @@
 package src.mailorder;
 
 /**
- * The Customer class creates a customer object.
+ * the Customer class creates a customer object.
  */
 public class Customer {
     // instance variables
@@ -25,7 +25,7 @@ public class Customer {
     private static int nbrOfCustomers;
 
     /**
-     * constructor that creates a customer object
+     * constructor that creates a customer object.
      * 
      * @param fullName
      * @param address
@@ -120,7 +120,6 @@ public class Customer {
         } else {
             return String.format("Customer Nbr: %d\n%s, %s %s\nBilling Address:\n%s",
                     customerNbr, lastName, firstName, middleName, address.toString());
-
         }
     }
 } // Customer

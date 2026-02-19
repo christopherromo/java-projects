@@ -2,9 +2,9 @@
 /**
  * Address.java
  * 
- * This file defines the Address class, which creates an address object.
+ * this file defines the Address class, which creates an address object.
  * 
- * @author Christopher Romo
+ * @author christopher romo
  * @since 07/26/2022
  * @version 1.0
  */
@@ -12,7 +12,7 @@
 package src.mailorder;
 
 /**
- * The Address class creates an address object.
+ * the Address class creates an address object.
  */
 public class Address {
     // instance variables
@@ -22,7 +22,7 @@ public class Address {
     private int zip;
 
     /**
-     * constructor that creates an address object
+     * constructor that creates an address object.
      * 
      * @param streetAddress
      * @param city
@@ -72,7 +72,7 @@ public class Address {
     }
 
     /**
-     * parses an address from two strings
+     * parses an address from two strings.
      * 
      * @param streetAddress
      * @param cityStateZip
@@ -90,6 +90,5 @@ public class Address {
     public String toString() {
         // returns a string
         return String.format("%s\n%s, %s %05d", streetAddress, city, state, zip);
-
     }
 } // Address

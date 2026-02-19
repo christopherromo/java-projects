@@ -2,9 +2,9 @@
 /**
  * Album.java
  * 
- * This file defines the Album class, which creates an album object.
+ * this file defines the Album class, which creates an album object.
  * 
- * @author Christopher Romo
+ * @author christopher romo
  * @since 07/31/2022
  * @version 1.0
  */
@@ -12,7 +12,7 @@
 package src.musicwithfiles;
 
 /**
- * The Album class creates an album object.
+ * the Album class creates an album object.
  */
 public class Album {
     // instance variables
@@ -72,6 +72,5 @@ public class Album {
     @Override
     public String toString() {
         return String.format("Title:  %s\nArtist: %s\nYear:   %s", title, artist, year);
-
     }
 } // Album

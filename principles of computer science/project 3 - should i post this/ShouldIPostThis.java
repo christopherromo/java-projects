@@ -2,10 +2,10 @@
 /**
  * ShouldIPostThis.java
  * 
- * This file defines the ShouldIPostThis class, which guides users
+ * this file defines the ShouldIPostThis class, which guides users
  * through a decision based on user input.
  * 
- * @author Christopher Romo
+ * @author christopher romo
  * @since 06/25/2022
  * @version 1.0
  */
@@ -13,12 +13,12 @@
 import java.util.Scanner;
 
 /**
- * The ShouldIPostThis class contains a main method that guides users
+ * the ShouldIPostThis class contains a main method that guides users
  * through a decision based on user input.
  */
 public class ShouldIPostThis {
     /**
-     * Main method - guides users through a decision based on user input.
+     * main method - guides users through a decision based on user input.
      * 
      * @param args command line arguments
      */
@@ -219,6 +219,5 @@ public class ShouldIPostThis {
             System.out.println("Invalid choice.");
         }
         input.close();
-        
     } // main
 } // ShouldIPostThis

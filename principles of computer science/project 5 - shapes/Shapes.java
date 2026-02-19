@@ -2,10 +2,10 @@
 /**
  * Shapes.java
  * 
- * This file defines the Shapes class, which allows you to draw shapes
+ * this file defines the Shapes class, which allows you to draw shapes
  * to the console based on user input.
  * 
- * @author Christopher Romo
+ * @author christopher romo
  * @since 06/30/2022
  * @version 1.0
  */
@@ -13,12 +13,12 @@
 import java.util.*;
 
 /**
- * The Shapes class contains a main method that allows you to draw shapes
+ * the Shapes class contains a main method that allows you to draw shapes
  * to the console based on user input.
  */
 public class Shapes {
     /**
-     * Main method - allows you to draw shapes to the console based on user input.
+     * main method - allows you to draw shapes to the console based on user input.
      * 
      * @param args command line arguments
      */
@@ -51,7 +51,6 @@ public class Shapes {
                         System.out.println();
                     }
                     break;
-
                 case 2:
                     System.out.println("You have chosen a Right Triangle.");
                     System.out.println("Enter the size: ");
@@ -63,7 +62,6 @@ public class Shapes {
                         System.out.println();
                     }
                     break;
-
                 case 3:
                     System.out.println("You have chosen an Upside-down Right Triangle.");
                     System.out.println("Enter the size: ");
@@ -75,7 +73,6 @@ public class Shapes {
                         System.out.println();
                     }
                     break;
-
                 case 4:
                     System.out.println("You have chosen an Isosceles Triangle.");
                     System.out.println("Enter the size: ");
@@ -91,7 +88,6 @@ public class Shapes {
                         System.out.println();
                     }
                     break;
-
                 case 5:
                     System.out.println("You have chosen a Diamond.");
                     System.out.println("Enter the size: ");
@@ -118,7 +114,6 @@ public class Shapes {
                         System.out.println();
                     }
                     break;
-
                 case 6:
                     System.out.println("You have chosen an Hourglass.");
                     System.out.println("Enter the size: ");
@@ -144,11 +139,9 @@ public class Shapes {
                         System.out.println();
                     }
                     break;
-
                 default:
                     System.out.println("Invalid choice, choose again.");
                     break;
-
             }
             System.out.println("Pick a shape to draw: ");
             System.out.println("1 - Rectangle");
@@ -163,6 +156,5 @@ public class Shapes {
         System.out.println("You have chosen to quit. Goodbye.");
 
         input.close();
-
     } // main
 } // Shapes

@@ -2,9 +2,9 @@
 /**
  * Movies.java
  * 
- * This file defines the Movies class, which keeps track and manages a movie collection.
+ * this file defines the Movies class, which keeps track and manages a movie collection.
  * 
- * @author Christopher Romo
+ * @author christopher romo
  * @since 07/21/2022
  * @version 1.0
  */
@@ -12,12 +12,12 @@
 import java.util.*;
 
 /**
- * The Movies class contains a main method that keeps track and manages a movie
+ * the Movies class contains methods that keeps track and manages a movie
  * collection.
  */
 public class Movies {
     /**
-     * displays the menu
+     * displays the menu.
      */
     public static void displayMenu() {
         System.out.println("Please make a selection:\n" +
@@ -29,7 +29,7 @@ public class Movies {
     }
 
     /**
-     * add a movie to the array
+     * add a movie to the array.
      * 
      * @param input    input scanner
      * @param movies   array of movies
@@ -43,7 +43,7 @@ public class Movies {
     }
 
     /**
-     * change a movie in the array
+     * change a movie in the array.
      * 
      * @param input    input scanner
      * @param movies   array of movies
@@ -61,11 +61,12 @@ public class Movies {
                 movies[i] = newMessage;
             }
         }
+        
         return movies;
     }
 
     /**
-     * print the movies in the array
+     * print the movies in the array.
      * 
      * @param movies   array of movies
      * @param movieNbr number of movies
@@ -77,13 +78,13 @@ public class Movies {
     }
 
     /**
-     * Main method - keeps track and manages a movie collection.
+     * main method - keeps track and manages a movie collection.
      * 
      * @param args command line arguments
      */
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        
+
         // prompt menu and track decision
         displayMenu();
         int decision = input.nextInt();
@@ -102,12 +103,10 @@ public class Movies {
                     movies = addMovie(input, movies, movieNbr);
                     movieNbr++;
                     break;
-
                 case 2:
                     System.out.println("You've chosen to update a movie");
                     movies = changeMovie(input, movies, movieNbr);
                     break;
-
                 case 3:
                     System.out.println("You've chosen to remove a movie");
                     System.out.println("Please enter a title: ");
@@ -120,7 +119,6 @@ public class Movies {
                             for (int j = i; j < movieNbr - 1; j++) {
                                 movies[i] = movies[i + 1];
                                 i++;
-
                             }
                             break;
                         }
@@ -129,12 +127,10 @@ public class Movies {
                         movieNbr--;
                     }
                     break;
-
                 case 4:
                     System.out.println("You've chosen to print your collection");
                     printMovies(movies, movieNbr);
                     break;
-
                 default:
                     System.out.println("Invalid response, try again.");
                     break;
@@ -151,6 +147,5 @@ public class Movies {
         }
 
         input.close();
-        
     } // main
 } // Movies

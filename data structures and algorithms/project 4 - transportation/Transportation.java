@@ -2,10 +2,10 @@
 /**
  * Transportation.java
  * 
- * This file defines the Transportation class, which creates a cargo terminal
+ * this file defines the Transportation class, which creates a cargo terminal
  * with semi-trucks and cargo planes.
  * 
- * @author Christopher Romo
+ * @author christopher romo
  * @since 09/29/2022
  * @version 1.0
  */
@@ -14,13 +14,13 @@ import java.util.*;
 import java.io.*;
 
 /**
- * The Transportation class contains a main method that creates a cargo
+ * the Transportation class contains methods that create a cargo
  * terminal with semi-trucks and cargo planes, reads in information from files,
  * and prints the terminal display and status.
  */
 public class Transportation {
 	/**
-	 * prints the terminal status
+	 * prints the terminal status.
 	 * 
 	 * @param terminal the cargo terminal
 	 */
@@ -74,12 +74,11 @@ public class Transportation {
 		for (SemiTruck truck : validTrucks) {
 			String result = truck.toString();
 			System.out.println(result);
-
-		}		
+		}
 	} // printTerminalStatus
 
 	/**
-	 * Main method - creates a cargo terminal with semi-trucks and cargo planes,
+	 * main method - creates a cargo terminal with semi-trucks and cargo planes,
 	 * reads in information from files, and prints the terminal display and status.
 	 * 
 	 * @param args command line arguments
@@ -133,12 +132,11 @@ public class Transportation {
 		// close files
 		readTruckFile.close();
 		readPlaneFile.close();
-
 	} // main
 } // Transportation
 
 /**
- * The CargoTerminal class creates a cargo terminal object.
+ * the CargoTerminal class creates a cargo terminal object.
  */
 class CargoTerminal {
 	// instance variables
@@ -148,7 +146,7 @@ class CargoTerminal {
 	private SemiTruck[] loadingDock;
 
 	/**
-	 * constructor that creates a cargo terminal object
+	 * constructor that creates a cargo terminal object.
 	 * 
 	 * @param numberDocks
 	 * @param numberStands
@@ -173,7 +171,7 @@ class CargoTerminal {
 	// behavior
 
 	/**
-	 * adds a semi-truck to the loading dock
+	 * adds a semi-truck to the loading dock.
 	 * 
 	 * @param dock      the dock number
 	 * @param semiTruck the semi-truck to add
@@ -183,7 +181,7 @@ class CargoTerminal {
 	}
 
 	/**
-	 * adds a cargo plane to the tarmac
+	 * adds a cargo plane to the tarmac.
 	 * 
 	 * @param stand the stand number
 	 * @param plane the cargo plane to add
@@ -193,7 +191,7 @@ class CargoTerminal {
 	}
 
 	/**
-	 * gets a semi-truck from the loading dock
+	 * gets a semi-truck from the loading dock.
 	 * 
 	 * @param dock the dock number
 	 * @return the semi-truck at the dock, or null if none
@@ -207,7 +205,7 @@ class CargoTerminal {
 	}
 
 	/**
-	 * gets a cargo plane from the tarmac
+	 * gets a cargo plane from the tarmac.
 	 * 
 	 * @param stand the stand number
 	 * @return the cargo plane at the stand, or null if none
@@ -221,7 +219,7 @@ class CargoTerminal {
 	}
 
 	/**
-	 * displays the cargo terminal
+	 * displays the cargo terminal.
 	 */
 	public void displayCargoTerminal() {
 		int truckCount = 0;
@@ -270,12 +268,11 @@ class CargoTerminal {
 			}
 		}
 		System.out.println();
-
 	}
 } // CargoTerminal
 
 /**
- * The SemiTruck class creates a semi-truck object.
+ * the SemiTruck class creates a semi-truck object.
  */
 class SemiTruck implements Comparable<SemiTruck> {
 	// instance variables
@@ -283,7 +280,7 @@ class SemiTruck implements Comparable<SemiTruck> {
 	private String destinationCity;
 
 	/**
-	 * constructor that creates a semi-truck object
+	 * constructor that creates a semi-truck object.
 	 * 
 	 * @param truckNumber
 	 * @param destinationCity
@@ -316,13 +313,12 @@ class SemiTruck implements Comparable<SemiTruck> {
 			return 0;
 		} else {
 			return 1;
-
 		}
 	}
 } // SemiTruck
 
 /**
- * The CargoPlane class creates a cargo plane object.
+ * the CargoPlane class creates a cargo plane object.
  */
 class CargoPlane implements Comparable<CargoPlane> {
 	// instance variables
@@ -332,7 +328,7 @@ class CargoPlane implements Comparable<CargoPlane> {
 	private String destinationCity;
 
 	/**
-	 * constructor that creates a cargo plane object
+	 * constructor that creates a cargo plane object.
 	 * 
 	 * @param flightNumber
 	 * @param capacity
@@ -365,7 +361,6 @@ class CargoPlane implements Comparable<CargoPlane> {
 			return 0;
 		} else {
 			return -1;
-
 		}
 	}
 } // CargoPlane

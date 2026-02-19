@@ -2,9 +2,9 @@
 /**
  * OrderItem.java
  * 
- * This file defines the OrderItem class, which creates an OrderItem object.
+ * this file defines the OrderItem class, which creates an OrderItem object.
  * 
- * @author Christopher Romo
+ * @author christopher romo
  * @since 08/02/2022
  * @version 1.0
  */
@@ -14,7 +14,7 @@ package src.pizzeria;
 import java.util.Scanner;
 
 /**
- * The OrderItem class creates an order item object.
+ * the abstract OrderItem class creates an order item object.
  */
 abstract class OrderItem {
     // prompts for details
@@ -22,5 +22,4 @@ abstract class OrderItem {
 
     // calculates cost
     public abstract double calculateCost();
-
 } // OrderItem

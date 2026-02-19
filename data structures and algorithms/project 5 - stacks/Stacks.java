@@ -2,9 +2,9 @@
 /**
  * Stacks.java
  * 
- * This file defines the Stacks class which contains methods to manipulate stacks.
+ * this file defines the Stacks class which contains methods to manipulate stacks.
  * 
- * @author Christopher Romo
+ * @author christopher romo
  * @since 10/07/2022
  * @version 1.0
  */
@@ -13,12 +13,12 @@ import java.util.*;
 import java.io.*;
 
 /**
- * The Stacks class contains methods to manipulate stacks including replacing
+ * the Stacks class contains methods to manipulate stacks including replacing
  * zeros with tens, sorting stacks, merging stacks, and printing stacks.
  */
 public class Stacks {
 	/**
-	 * replaces all zeros in the incoming stack with tens
+	 * replaces all zeros in the incoming stack with tens.
 	 * 
 	 * @param stack stack to modify
 	 */
@@ -39,12 +39,11 @@ public class Stacks {
 		// place values back into original stack
 		for (int i = 0; i < stackSize; i++) {
 			stack.push(tempStack.pop());
-
 		}
 	} // replaceZerosWithTen
 
 	/**
-	 * sorts an incoming generic stack from largest to smallest
+	 * sorts an incoming generic stack from largest to smallest.
 	 * 
 	 * @param <E>    generic type that extends Comparable
 	 * @param aStack stack to sort
@@ -74,18 +73,16 @@ public class Stacks {
 
 			// save value on sorted stack
 			tempStack.push(value);
-
 		} // place
 
 		// place values back into original stack
 		for (int i = 0; i < stackSize; i++) {
 			aStack.push(tempStack.pop());
-
 		}
 	} // sortStack
 
 	/**
-	 * merges two sorted generic stacks into one sorted generic stack
+	 * merges two sorted generic stacks into one sorted generic stack.
 	 * 
 	 * @param <E>      generic type that extends Comparable
 	 * @param stackOne stack to merge
@@ -121,11 +118,10 @@ public class Stacks {
 
 		// return the merged stack
 		return mergedStack;
-
 	} // mergeStacks
 
 	/**
-	 * prints a stack of the type Integer
+	 * prints a stack of the type Integer.
 	 * 
 	 * @param stack stack to print
 	 */
@@ -146,11 +142,10 @@ public class Stacks {
 		}
 
 		System.out.println();
-
 	} // printStack (Integer)
 
 	/**
-	 * prints a generic stack
+	 * prints a generic stack.
 	 * 
 	 * @param <E>   generic type that extends Comparable
 	 * @param stack stack to print
@@ -172,11 +167,10 @@ public class Stacks {
 		}
 
 		System.out.println();
-
 	} // printStack (Generic)
 
 	/**
-	 * Main method - fill stacks, call methods, and print results.
+	 * main method - fill stacks, call methods, and print results.
 	 * 
 	 * @param args - command line arguments
 	 * @throws IOException if file not found
@@ -291,19 +285,18 @@ public class Stacks {
 		System.out.println("Merged Stack: alphabetical\n"
 				+ "----------------------------------------------");
 		printStack(mergedStringStack);
-
 	} // main
 } // Stacks
 
 /**
- * The GenericStack class defines a generic stack data structure.
+ * the GenericStack class defines a generic stack data structure.
  */
 class GenericStack<E> {
 	// instance variables
 	private ArrayList<E> list;
 
 	/**
-	 * constructor that creates an empty stack
+	 * constructor that creates an empty stack.
 	 */
 	public GenericStack() {
 		list = new ArrayList<>();
@@ -330,6 +323,5 @@ class GenericStack<E> {
 	public E peek() {
 		E value = list.get(getSize() - 1);
 		return value;
-		
 	}
 } // GenericStack

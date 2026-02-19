@@ -2,10 +2,10 @@
 /**
  * MailOrder.java
  * 
- * This file defines the MailOrder class, which uses various classes to
+ * this file defines the MailOrder class, which uses various classes to
  * simulate a mail order system.
  * 
- * @author Christopher Romo
+ * @author christopher romo
  * @since 07/28/2022
  * @version 1.0
  */
@@ -16,7 +16,7 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 /**
- * The MailOrder class contains a main method that simulates
+ * the MailOrder class contains methods that simulate
  * a mail order system.
  */
 public class MailOrder {
@@ -32,7 +32,7 @@ public class MailOrder {
             + "Please make a selection:";
 
     /**
-     * prompts for an integer
+     * prompts for an integer.
      * 
      * @param input   input scanner
      * @param message message to display
@@ -48,11 +48,12 @@ public class MailOrder {
             System.out.println(message);
             value = Integer.parseInt(input.nextLine());
         }
+
         return value;
     }
 
     /**
-     * prompts for a double
+     * prompts for a double.
      * 
      * @param input   input scanner
      * @param message message to display
@@ -68,11 +69,12 @@ public class MailOrder {
             System.out.println(message);
             value = Double.parseDouble(input.nextLine());
         }
+
         return value;
     }
 
     /**
-     * prompts for a string
+     * prompts for a string.
      * 
      * @param input   input scanner
      * @param message message to display
@@ -86,11 +88,12 @@ public class MailOrder {
             System.out.println(message);
             value = input.nextLine();
         }
+
         return value;
     }
 
     /**
-     * prompts for an address
+     * prompts for an address.
      * 
      * @param input input scanner
      * @return the address entered
@@ -107,7 +110,7 @@ public class MailOrder {
     }
 
     /**
-     * adds a customer to the array list
+     * adds a customer to the array list.
      * 
      * @param input     input scanner
      * @param customers array list of customers
@@ -122,7 +125,7 @@ public class MailOrder {
     }
 
     /**
-     * finds a customer by their number
+     * finds a customer by their number.
      * 
      * @param customers array list of customers
      * @param number    customer number
@@ -133,11 +136,12 @@ public class MailOrder {
             if (customer.getCustomerNbr() == number)
                 return customer;
         }
+
         return null;
     }
 
     /**
-     * creates an order
+     * creates an order.
      * 
      * @param input     input scanner
      * @param customers array list of customers
@@ -176,7 +180,7 @@ public class MailOrder {
     }
 
     /**
-     * prints all customers
+     * prints all customers.
      * 
      * @param customers array list of customers
      */
@@ -188,7 +192,7 @@ public class MailOrder {
     }
 
     /**
-     * prints all orders
+     * prints all orders.
      * 
      * @param orders array list of orders
      */
@@ -200,7 +204,7 @@ public class MailOrder {
     }
 
     /**
-     * prints all orders in a given zip code
+     * prints all orders in a given zip code.
      * 
      * @param input  input scanner
      * @param orders array list of orders
@@ -218,7 +222,7 @@ public class MailOrder {
     }
 
     /**
-     * Main method - simulates a mail order system.
+     * main method - simulates a mail order system.
      * 
      * @param args command line arguments
      */

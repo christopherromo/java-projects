@@ -2,9 +2,9 @@
 /**
  * Salad.java
  * 
- * This file defines the Salad class, which creates a salad object.
+ * this file defines the Salad class, which creates a salad object.
  * 
- * @author Christopher Romo
+ * @author christopher romo
  * @since 08/02/2022
  * @version 1.0
  */
@@ -14,7 +14,7 @@ package src.pizzeria;
 import java.util.Scanner;
 
 /**
- * The Salad class creates a salad object.
+ * the Salad class creates a salad object.
  */
 public class Salad extends OrderItem {
     // instance variables
@@ -47,6 +47,5 @@ public class Salad extends OrderItem {
         return String.format("%-30s%10.2f\n",
                 "Salad with " + nameToTitleCase() + " dressing",
                 calculateCost());
-                
     }
 } // Salad

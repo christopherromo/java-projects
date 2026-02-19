@@ -2,10 +2,10 @@
 /**
  * Dogs.java
  * 
- * This file defines the Dogs class, which reads in dog data from a file,
+ * this file defines the Dogs class, which reads in dog data from a file,
  * creates dog objects, and analyzes their behaviors.
  * 
- * @author Christopher Romo
+ * @author christopher romo
  * @since 09/14/2022
  * @version 1.0
  */
@@ -14,12 +14,12 @@ import java.util.*;
 import java.io.*;
 
 /**
- * The Dogs class contains the main method that reads in dog data from a file,
+ * the Dogs class contains methods that reads in dog data from a file,
  * creates dog objects, and analyzes their behaviors.
  */
 public class Dogs {
 	/**
-	 * find dogs that are protectors and return them in an array list
+	 * find dogs that are protectors and return them in an array list.
 	 * 
 	 * @param dogs array of dogs
 	 * @return array list of protective dogs
@@ -34,11 +34,10 @@ public class Dogs {
 			}
 		}
 		return protectiveDogs;
-
 	} // findProtectors
 
 	/**
-	 * find the dog with the best protecting ability and return it
+	 * find the dog with the best protecting ability and return it.
 	 * 
 	 * @param protectors array list of protective dogs
 	 * @return the dog with the best protecting ability
@@ -59,11 +58,10 @@ public class Dogs {
 			}
 		}
 		return null;
-
 	} // findBestProtector
 
 	/**
-	 * find the most common ability among the dogs and return it
+	 * find the most common ability among the dogs and return it.
 	 * 
 	 * @param dogs array of dogs
 	 * @return the most common ability
@@ -113,11 +111,10 @@ public class Dogs {
 		} else {
 			return "";
 		}
-		
 	} // findMostCommonAbility
 
 	/**
-	 * Main method - reads in dog data from a file, creates dog objects,
+	 * main method - reads in dog data from a file, creates dog objects,
 	 * and analyzes their behaviors.
 	 * 
 	 * @param args command line arguments
@@ -150,22 +147,18 @@ public class Dogs {
 					dogs[counter] = new BorderCollie(name, servingAbility, herdingAbility, protectingAbility);
 					counter++;
 					break;
-
 				case "Boxer":
 					dogs[counter] = new Boxer(name, servingAbility, herdingAbility, huntingAbility, protectingAbility);
 					counter++;
 					break;
-
 				case "GermanShepherd":
 					dogs[counter] = new GermanSheppard(name, servingAbility, herdingAbility, protectingAbility);
 					counter++;
 					break;
-
 				case "GoldenRetriever":
 					dogs[counter] = new GoldenRetriever(name, servingAbility, huntingAbility);
 					counter++;
 					break;
-
 				default:
 					break;
 			}
@@ -205,40 +198,39 @@ public class Dogs {
 				+ "--------------------------------");
 		String mostCommon = findMostCommonAbility(dogs);
 		System.out.println(mostCommon + " is the most ability among the given dogs");
-
 	} // main
 } // Dogs
 
 /**
- * Interface for serving ability
+ * interface for serving ability.
  */
 interface Server {
 	public abstract int serve();
 } // Server
 
 /**
- * Interface for herding ability
+ * interface for herding ability.
  */
 interface Herder {
 	public abstract int herd();
 } // Herder
 
 /**
- * Interface for hunting ability
+ * interface for hunting ability.
  */
 interface Hunter {
 	public abstract int hunt();
 } // Hunter
 
 /**
- * Interface for protecting ability
+ * interface for protecting ability.
  */
 interface Protector {
 	public abstract int protect();
 } // Protector
 
 /**
- * The abstract Dog class creates a dog object.
+ * the abstract Dog class creates a dog object.
  */
 abstract class Dog {
 	// instance variables
@@ -265,11 +257,10 @@ abstract class Dog {
 
 	// behavior
 	public abstract String temperament();
-
 } // Dog
 
 /**
- * The BorderCollie class creates a border collie dog object.
+ * the BorderCollie class creates a border collie dog object.
  */
 class BorderCollie extends Dog implements Server, Herder, Protector {
 	// instance variables
@@ -278,7 +269,7 @@ class BorderCollie extends Dog implements Server, Herder, Protector {
 	private int protectingAbility;
 
 	/**
-	 * constructor that creates a border collie dog object
+	 * constructor that creates a border collie dog object.
 	 * 
 	 * @param name
 	 * @param servingAbility
@@ -296,7 +287,7 @@ class BorderCollie extends Dog implements Server, Herder, Protector {
 	// behavior
 	@Override
 	public String temperament() {
-		return "Intelligent, tenacious, energic";
+		return "Intelligent, tenacious, energetic";
 	}
 
 	@Override
@@ -312,12 +303,11 @@ class BorderCollie extends Dog implements Server, Herder, Protector {
 	@Override
 	public int protect() {
 		return protectingAbility;
-
 	}
 } // BorderCollie
 
 /**
- * The Boxer class creates a boxer dog object.
+ * the Boxer class creates a boxer dog object.
  */
 class Boxer extends Dog implements Server, Herder, Hunter, Protector {
 	// instance variables
@@ -327,7 +317,7 @@ class Boxer extends Dog implements Server, Herder, Hunter, Protector {
 	private int protectingAbility;
 
 	/**
-	 * constructor that creates a boxer dog object
+	 * constructor that creates a boxer dog object.
 	 * 
 	 * @param name
 	 * @param servingAbility
@@ -368,12 +358,11 @@ class Boxer extends Dog implements Server, Herder, Hunter, Protector {
 	@Override
 	public int protect() {
 		return protectingAbility;
-
 	}
 } // Boxer
 
 /**
- * The GermanSheppard class creates a german sheppard dog object.
+ * the GermanSheppard class creates a german sheppard dog object.
  */
 class GermanSheppard extends Dog implements Server, Herder, Protector {
 	// instance variables
@@ -382,7 +371,7 @@ class GermanSheppard extends Dog implements Server, Herder, Protector {
 	private int protectingAbility;
 
 	/**
-	 * constructor that creates a german sheppard dog object
+	 * constructor that creates a german sheppard dog object.
 	 * 
 	 * @param name
 	 * @param servingAbility
@@ -416,12 +405,11 @@ class GermanSheppard extends Dog implements Server, Herder, Protector {
 	@Override
 	public int protect() {
 		return protectingAbility;
-
 	}
 } // GermanSheppard
 
 /**
- * The GoldenRetriever class creates a golden retriever dog object.
+ * the GoldenRetriever class creates a golden retriever dog object.
  */
 class GoldenRetriever extends Dog implements Server, Hunter {
 	// instance variables
@@ -429,7 +417,7 @@ class GoldenRetriever extends Dog implements Server, Hunter {
 	private int huntingAbility;
 
 	/**
-	 * constructor that creates a golden retriever dog object
+	 * constructor that creates a golden retriever dog object.
 	 * 
 	 * @param name
 	 * @param servingAbility
@@ -456,6 +444,5 @@ class GoldenRetriever extends Dog implements Server, Hunter {
 	@Override
 	public int hunt() {
 		return huntingAbility;
-
 	}
 } // GoldenRetriever

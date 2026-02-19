@@ -2,9 +2,9 @@
 /**
  * OrderItem.java
  * 
- * This file defines the OrderItem class, which creates an order item object.
+ * this file defines the OrderItem class, which creates an order item object.
  * 
- * @author Christopher Romo
+ * @author christopher romo
  * @since 07/26/2022
  * @version 1.0
  */
@@ -12,7 +12,7 @@
 package src.mailorder;
 
 /**
- * The OrderItem class creates an order item object.
+ * the OrderItem class creates an order item object.
  */
 public class OrderItem {
     // instance variables
@@ -20,7 +20,7 @@ public class OrderItem {
     private double cost;
 
     /**
-     * constructor that creates an order item object
+     * constructor that creates an order item object.
      * 
      * @param description
      * @param cost
@@ -52,6 +52,5 @@ public class OrderItem {
     @Override
     public String toString() {
         return String.format("\n%-30s  $%7.2f*", description, cost);
-        
     }
 } // OrderItem

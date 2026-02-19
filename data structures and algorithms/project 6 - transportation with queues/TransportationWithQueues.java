@@ -2,10 +2,10 @@
 /**
  * TransportationWithQueues.java
  * 
- * This file defines the TransportationWithQueues class, which simulates
+ * this file defines the TransportationWithQueues class, which simulates
  * a cargo terminal using queues to manage semi-trucks and cargo planes.
  * 
- * @author Christopher Romo
+ * @author christopher romo
  * @since 10/26/2022
  * @version 1.0
  */
@@ -14,12 +14,12 @@ import java.util.*;
 import java.io.*;
 
 /**
- * The TransportationWithQueues class contains a main method that simulates
+ * the TransportationWithQueues class contains a main method that simulates
  * a cargo terminal using queues to manage semi-trucks and cargo planes.
  */
 public class TransportationWithQueues {
 	/**
-	 * Main method - simulates a cargo terminal using queues to manage semi-trucks
+	 * main method - simulates a cargo terminal using queues to manage semi-trucks
 	 * and cargo planes.
 	 * 
 	 * @param args command line arguments
@@ -90,12 +90,11 @@ public class TransportationWithQueues {
 		// close files
 		readTruckFile.close();
 		readPlaneFile.close();
-
 	} // main
 } // TransportationWithQueues
 
 /**
- * The Terminal class creates a terminal object.
+ * the Terminal class creates a terminal object.
  */
 class Terminal {
 	// instance variables
@@ -105,7 +104,7 @@ class Terminal {
 	private Truck[] loadingDock;
 
 	/**
-	 * constructor that creates a terminal object
+	 * constructor that creates a terminal object.
 	 * 
 	 * @param numberDocks
 	 * @param numberStands
@@ -146,7 +145,7 @@ class Terminal {
 	// behavior
 
 	/**
-	 * adds a truck to the loading dock
+	 * adds a truck to the loading dock.
 	 * 
 	 * @param dock  dock number
 	 * @param truck truck to add
@@ -156,7 +155,7 @@ class Terminal {
 	}
 
 	/**
-	 * adds a plane to the tarmac
+	 * adds a plane to the tarmac.
 	 * 
 	 * @param stand stand number
 	 * @param plane plane to add
@@ -166,7 +165,7 @@ class Terminal {
 	}
 
 	/**
-	 * removes a plane from the tarmac
+	 * removes a plane from the tarmac.
 	 * 
 	 * @param stand stand number
 	 * @return the removed plane
@@ -183,7 +182,7 @@ class Terminal {
 	}
 
 	/**
-	 * displays the terminal
+	 * displays the terminal.
 	 */
 	public void displayTerminal() {
 		int truckCount = 0;
@@ -233,12 +232,11 @@ class Terminal {
 			}
 		}
 		System.out.println();
-
 	}
 } // Terminal
 
 /**
- * The Truck class creates a truck object.
+ * the Truck class creates a truck object.
  */
 class Truck implements Comparable<Truck> {
 	// instance variables
@@ -246,7 +244,7 @@ class Truck implements Comparable<Truck> {
 	private String destinationCity;
 
 	/**
-	 * constructor that creates a truck object
+	 * constructor that creates a truck object.
 	 * 
 	 * @param truckNumber
 	 * @param destinationCity
@@ -279,13 +277,12 @@ class Truck implements Comparable<Truck> {
 			return 0;
 		} else {
 			return 1;
-
 		}
 	}
 } // Truck
 
 /**
- * The Plane class creates a plane object.
+ * the Plane class creates a plane object.
  */
 class Plane implements Comparable<Plane> {
 	// instance variables
@@ -294,7 +291,7 @@ class Plane implements Comparable<Plane> {
 	private String destinationCity;
 
 	/**
-	 * constructor that creates a plane object
+	 * constructor that creates a plane object.
 	 * 
 	 * @param flightNumber
 	 * @param capacity
@@ -405,12 +402,11 @@ class Plane implements Comparable<Plane> {
 			}
 		}
 		return compareValue;
-
 	}
 } // Plane
 
 /**
- * The Taxiways class creates a taxiways object.
+ * the Taxiways class creates a taxiways object.
  */
 class Taxiways {
 	// instance variables
@@ -418,7 +414,7 @@ class Taxiways {
 	private PriorityQueue<Plane> priorityTaxiway;
 
 	/**
-	 * constructor that creates a taxiways object
+	 * constructor that creates a taxiways object.
 	 */
 	public Taxiways() {
 		basicTaxiway = new LinkedList<>();
@@ -448,19 +444,18 @@ class Taxiways {
 
 	public Plane removePlaneFromBasicTaxiway() {
 		return basicTaxiway.poll();
-
 	}
 } // Taxiways
 
 /**
- * The Runway class creates a runway object.
+ * the Runway class creates a runway object.
  */
 class Runway {
 	// Instance variables
 	private Queue<Plane> runway;
 
 	/**
-	 * constructor that creates a runway object
+	 * constructor that creates a runway object.
 	 */
 	public Runway() {
 		runway = new LinkedList<>();
@@ -477,15 +472,19 @@ class Runway {
 
 	public Plane removePlaneFromRunway() {
 		return runway.poll();
-
 	}
 } // Runway
 
 /**
- * The AirTrafficController class creates an air traffic controller object.
+ * the AirTrafficController class creates an air traffic controller object.
  */
 class AirTrafficController {
-	// moves planes from the cargo terminal tarmac onto the taxiways
+	/**
+	 * moves planes from the cargo terminal tarmac onto the taxiways.
+	 * 
+	 * @param terminal the terminal to move planes from
+	 * @param taxiways the taxiways to move planes to
+	 */
 	public void movePlanesToTaxiways(Terminal terminal, Taxiways taxiways) {
 		System.out.println("Control Tower: Moving planes from cargo terminal tarmac to taxiways: \n"
 				+ "---------------------------------------------------------------------------------");
@@ -510,7 +509,12 @@ class AirTrafficController {
 		}
 	}
 
-	// moves planes from the taxiways to the runway
+	/**
+	 * moves planes from the taxiways to the runway.
+	 * 
+	 * @param taxiways the taxiways to move planes from
+	 * @param runway   the runway to move planes to
+	 */
 	public void movePlanesToRunway(Taxiways taxiways, Runway runway) {
 		System.out.println("Control Tower: Moving cargo planes from taxiways to runway: \n"
 				+ "--------------------------------------------------------------------");
@@ -532,7 +536,12 @@ class AirTrafficController {
 		}
 	}
 
-	// clears planes for takeoff
+	/**
+	 * clears planes for takeoff by removing them from the runway and printing their
+	 * details.
+	 * 
+	 * @param runway the runway to clear planes from
+	 */
 	public void clearedForTakeoff(Runway runway) {
 		System.out.println("Control Tower: Ready for takeoff! \n"
 				+ "--------------------------------------------------------------------");
@@ -544,7 +553,6 @@ class AirTrafficController {
 					tempQueue.peek().getFlightNumber(), tempQueue.peek().getDestinationCity(),
 					tempQueue.peek().getCargoType()));
 			tempQueue.poll();
-
 		}
 	}
 } // AirTrafficController

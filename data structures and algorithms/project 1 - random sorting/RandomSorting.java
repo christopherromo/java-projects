@@ -2,10 +2,10 @@
 /**
  * RandomSorting.java
  * 
- * This file defines the RandomSorting class, which generates 35 random integers,
+ * this file defines the RandomSorting class, which generates 35 random integers,
  * writes them to a file, reads them back, and sorts them in descending order.
  * 
- * @author Christopher Romo
+ * @author christopher romo
  * @since 09/01/2022
  * @version 1.0
  */
@@ -15,13 +15,13 @@ import java.io.*;
 import java.lang.Math;
 
 /**
- * The RandomSorting class contains a main method that generates random
+ * the RandomSorting class contains a main method that generates random
  * integers, writes them to a file, reads them back, and sorts them in
  * descending order.
  */
 public class RandomSorting {
 	/**
-	 * Main method - generates random integers, writes them to a file, reads them
+	 * main method - generates random integers, writes them to a file, reads them
 	 * back, and sorts them in descending order.
 	 * 
 	 * @param args command line arguments
@@ -103,6 +103,5 @@ public class RandomSorting {
 		}
 
 		System.out.println("\nFile is in directory: " + fileName.getAbsolutePath());
-		
 	} // main
 } // RandomSorting

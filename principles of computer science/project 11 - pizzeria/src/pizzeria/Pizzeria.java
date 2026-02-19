@@ -2,9 +2,9 @@
 /**
  * Pizzeria.java
  * 
- * This file defines the Pizzeria class, which takes a customer's order.
+ * this file defines the Pizzeria class, which takes a customer's order.
  * 
- * @author Christopher Romo
+ * @author christopher romo
  * @since 08/02/2022
  * @version 1.0
  */
@@ -15,7 +15,7 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 /**
- * The Pizzeria class contains a main method that takes a customer's order
+ * the Pizzeria class contains methods that takes a customer's order
  * and prints a receipt.
  */
 public class Pizzeria {
@@ -30,7 +30,7 @@ public class Pizzeria {
             + "May I take your order?";
 
     /**
-     * prints a receipt
+     * prints a receipt.
      * 
      * @param items array list of items
      */
@@ -52,7 +52,7 @@ public class Pizzeria {
     }
 
     /**
-     * adds a new item to the array list
+     * adds a new item to the array list.
      * 
      * @param input    input scanner
      * @param items    array list of items
@@ -76,7 +76,7 @@ public class Pizzeria {
     }
 
     /**
-     * Main method - simulates a pizzeria ordering system.
+     * main method - simulates a pizzeria ordering system.
      * 
      * @param args command line arguments
      */
@@ -115,6 +115,5 @@ public class Pizzeria {
 
         System.out.println("Thank you for coming!");
         input.close();
-        
     } // main
 } // Pizzeria

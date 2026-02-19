@@ -2,10 +2,10 @@
 /**
  * Music.java
  * 
- * This file defines the Music class, which allows you to manage
+ * this file defines the Music class, which allows you to manage
  * a music album collection.
  * 
- * @author Christopher Romo
+ * @author christopher romo
  * @since 07/24/2022
  * @version 1.0
  */
@@ -15,12 +15,12 @@ package src.music;
 import java.util.*;
 
 /**
- * The Music class contains a main method that allows you to manage
+ * the Music class contains methods that allow you to manage
  * a music album collection.
  */
 public class Music {
     /**
-     * displays the menu
+     * displays the menu.
      */
     public static void displayMenu() {
         System.out.println("Please make a selection:\n" +
@@ -34,7 +34,7 @@ public class Music {
     }
 
     /**
-     * adds an album to the collection
+     * adds an album to the collection.
      * 
      * @param input       input scanner
      * @param albums      array of albums
@@ -56,6 +56,7 @@ public class Music {
                 isValidYear = year >= 1900 && year <= 2100;
             }
         }
+
         if (input.hasNextLine())
             input.nextLine();
 
@@ -64,7 +65,7 @@ public class Music {
     }
 
     /**
-     * changes an existing album in the collection
+     * changes an existing album in the collection.
      * 
      * @param input       input scanner
      * @param albums      array of albums
@@ -88,6 +89,7 @@ public class Music {
                 isValidYear = year >= 1900 && year <= 2100;
             }
         }
+
         if (input.hasNextLine())
             input.nextLine();
 
@@ -98,11 +100,12 @@ public class Music {
                 albums[i].setYear(year);
             }
         }
+
         return albums;
     }
 
     /**
-     * deletes an album from the collection
+     * deletes an album from the collection.
      * 
      * @param input       input scanner
      * @param albums      array of albums
@@ -123,11 +126,12 @@ public class Music {
                 break;
             }
         }
+
         return albums;
     }
 
     /**
-     * prints the entire collection
+     * prints the entire collection.
      * 
      * @param albums      array of albums
      * @param nbrOfAlbums number of albums
@@ -139,7 +143,7 @@ public class Music {
     }
 
     /**
-     * prints the albums by artist
+     * prints the albums by artist.
      * 
      * @param input       input scanner
      * @param albums      array of albums
@@ -157,7 +161,7 @@ public class Music {
     }
 
     /**
-     * prints the albums by year
+     * prints the albums by year.
      * 
      * @param input       input scanner
      * @param albums      array of albums
@@ -177,7 +181,7 @@ public class Music {
     }
 
     /**
-     * Main method - allows you to manage a music album collection.
+     * main method - allows you to manage a music album collection.
      * 
      * @param args command line arguments
      */
@@ -201,28 +205,22 @@ public class Music {
                     albums = addAlbum(input, albums, nbrOfAlbums);
                     nbrOfAlbums++;
                     break;
-
                 case 2:
                     albums = changeAlbum(input, albums, nbrOfAlbums);
                     break;
-
                 case 3:
                     albums = deleteAlbum(input, albums, nbrOfAlbums);
                     nbrOfAlbums--;
                     break;
-
                 case 4:
                     printCollection(albums, nbrOfAlbums);
                     break;
-
                 case 5:
                     printByArtist(input, albums, nbrOfAlbums);
                     break;
-
                 case 6:
                     printByYear(input, albums, nbrOfAlbums);
                     break;
-
                 default:
                     System.out.println("Invalid response, try again.");
                     break;
@@ -231,7 +229,9 @@ public class Music {
             if (decision >= 1 && decision <= 6) {
                 displayMenu();
             }
+
             decision = input.nextInt();
+
             if (input.hasNextLine())
                 input.nextLine();
         }
@@ -241,6 +241,5 @@ public class Music {
         }
 
         input.close();
-        
     } // main
 } // Music

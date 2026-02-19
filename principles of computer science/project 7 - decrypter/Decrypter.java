@@ -2,10 +2,10 @@
 /**
  * Decrypter.java
  * 
- * This file defines the Decrypter class, which allows you to encrypt
+ * this file defines the Decrypter class, which allows you to encrypt
  * and decrypt messages using the Caesar cipher.
  * 
- * @author Christopher Romo
+ * @author christopher romo
  * @since 07/19/2022
  * @version 1.0
  */
@@ -13,12 +13,12 @@
 import java.util.*;
 
 /**
- * The Decrypter class contains a main method that allows you to encrypt
+ * the Decrypter class contains methods that allow you to encrypt
  * and decrypt messages using the Caesar cipher.
  */
 public class Decrypter {
     /**
-     * displays intro message
+     * displays intro message.
      */
     public static void displayIntro() {
         System.out.println("Welcome to the Code Cracker!\n" +
@@ -30,7 +30,7 @@ public class Decrypter {
     }
 
     /**
-     * displays the menu
+     * displays the menu.
      */
     public static void displayMenu() {
         System.out.println("**************************************\n" +
@@ -43,7 +43,7 @@ public class Decrypter {
     }
 
     /**
-     * prompts for a string
+     * prompts for a string.
      * 
      * @param input  input scanner
      * @param prompt prompt message
@@ -56,7 +56,7 @@ public class Decrypter {
     }
 
     /**
-     * prompts for an integer
+     * prompts for an integer.
      * 
      * @param input  input scanner
      * @param prompt prompt message
@@ -72,7 +72,7 @@ public class Decrypter {
     }
 
     /**
-     * encrypts a single character
+     * encrypts a single character.
      * 
      * @param c character to encrypt
      * @param s shift value
@@ -95,7 +95,7 @@ public class Decrypter {
     }
 
     /**
-     * decrypts a single character
+     * decrypts a single character.
      * 
      * @param c character to decrypt
      * @param s shift value
@@ -118,7 +118,7 @@ public class Decrypter {
     }
 
     /**
-     * encrypts a message
+     * encrypts a message.
      * 
      * @param message message to encrypt
      * @param shift   shift value
@@ -136,7 +136,7 @@ public class Decrypter {
     }
 
     /**
-     * decrypts a message
+     * decrypts a message.
      * 
      * @param message message to decrypt
      * @param shift   shift value
@@ -154,7 +154,7 @@ public class Decrypter {
     }
 
     /**
-     * decrypts a message by brute force
+     * decrypts a message by brute force.
      * 
      * @param message message to decrypt
      */
@@ -166,7 +166,7 @@ public class Decrypter {
     }
 
     /**
-     * prompts for encryption
+     * prompts for encryption.
      * 
      * @param input input scanner
      */
@@ -179,7 +179,7 @@ public class Decrypter {
     }
 
     /**
-     * prompts for decryption
+     * prompts for decryption.
      * 
      * @param input input scanner
      */
@@ -192,7 +192,7 @@ public class Decrypter {
     }
 
     /**
-     * prompts for brute-force decryption
+     * prompts for brute-force decryption.
      * 
      * @param input input scanner
      */
@@ -205,7 +205,7 @@ public class Decrypter {
     }
 
     /**
-     * Main method - allows you to encrypt and decrypt messages.
+     * main method - allows you to encrypt and decrypt messages.
      * 
      * @param args command line arguments
      */
@@ -225,19 +225,15 @@ public class Decrypter {
                 case 1:
                     handleEncrypt(input);
                     break;
-
                 case 2:
                     handleDecrypt(input);
                     break;
-
                 case 3:
                     handleBruteForce(input);
                     break;
-
                 default:
                     System.out.println("Invalid");
                     break;
-
             }
             // loop the menu
             displayMenu();
@@ -251,6 +247,5 @@ public class Decrypter {
         }
 
         input.close();
-
     } // main
 } // Decrypter

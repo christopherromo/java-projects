@@ -2,10 +2,10 @@
 /**
  * ParrotTrain.java
  * 
- * This file defines the ParrotTrain class, which simulates a train journey
+ * this file defines the ParrotTrain class, which simulates a train journey
  * using linked list data structures to manage rail cars.
  * 
- * @author Christopher Romo
+ * @author christopher romo
  * @since 11/14/2022
  * @version 1.0
  */
@@ -14,12 +14,12 @@ import java.util.*;
 import java.io.*;
 
 /**
- * The ParrotTrain class contains a main method that simulates a train journey
+ * the ParrotTrain class contains a main method that simulates a train journey
  * using linked list data structures to manage rail cars.
  */
 public class ParrotTrain {
 	/**
-	 * Main method - simulates a train journey using linked list data structures to
+	 * main method - simulates a train journey using linked list data structures to
 	 * manage rail cars.
 	 * 
 	 * @param args command line arguments
@@ -75,12 +75,11 @@ public class ParrotTrain {
 		parrotTrain.print();
 		System.out.println("\n\nRail Cars in Doubly Linked List - Printed Backwards\n");
 		theParrotTrainTwo.printBackwards();
-
 	} // main
 } // ParrotTrain
 
 /**
- * The RailCar class creates a rail car object.
+ * the RailCar class creates a rail car object.
  */
 class RailCar {
 	// instance variables
@@ -89,7 +88,7 @@ class RailCar {
 	private String destination;
 
 	/**
-	 * constructor that creates a rail car object
+	 * constructor that creates a rail car object.
 	 * 
 	 * @param number
 	 * @param freight
@@ -139,13 +138,12 @@ class RailCar {
 		} else // West Palm Beach
 		{
 			return 1;
-
 		}
 	}
 } // RailCar
 
 /**
- * The SingleLinkedList class defines a singly linked list of rail cars
+ * the SingleLinkedList class defines a singly linked list of rail cars
  * sorted by destination.
  */
 class SingleLinkedList {
@@ -153,7 +151,7 @@ class SingleLinkedList {
 	private Node head;
 
 	/**
-	 * constructor that creates a train linked list object
+	 * constructor that creates a train linked list object.
 	 */
 	public SingleLinkedList() {
 		head = null;
@@ -162,7 +160,7 @@ class SingleLinkedList {
 	// behavior
 
 	/**
-	 * adds a rail car to the linked list sorted by destination
+	 * adds a rail car to the linked list sorted by destination.
 	 * 
 	 * @param railCarToAdd the rail car to add
 	 */
@@ -177,7 +175,7 @@ class SingleLinkedList {
 		while (current != null && !found) // positioning
 		{
 			if (railCarToAdd.compareTo(current.railcar) == 1) {
-				if (previous == null) // insertion point at the beggining
+				if (previous == null) // insertion point at the beginning
 				{
 					railCarNode.next = head;
 					head = railCarNode;
@@ -215,12 +213,11 @@ class SingleLinkedList {
 
 			current.next = railCarNode;
 			placed = true;
-
 		}
 	} // addByDestination
 
 	/**
-	 * removes rail cars by destination from the linked list
+	 * removes rail cars by destination from the linked list.
 	 * 
 	 * @param destination the destination to remove
 	 * @return the number of rail cars removed
@@ -260,11 +257,10 @@ class SingleLinkedList {
 
 		// return rail cars removed
 		return railCarsRemoved;
-
 	} // removeByDestination
 
 	/**
-	 * removes rail cars by freight from the linked list
+	 * removes rail cars by freight from the linked list.
 	 * 
 	 * @param freight the freight to remove
 	 */
@@ -295,13 +291,12 @@ class SingleLinkedList {
 				// move linked list
 				previous = current;
 				current = current.next;
-
 			}
 		}
 	} // removeByFreight
 
 	/**
-	 * prints the linked list
+	 * prints the linked list.
 	 */
 	public void print() {
 		// declare variables
@@ -315,33 +310,23 @@ class SingleLinkedList {
 		while (current != null) {
 			System.out.println(current.railcar.toString());
 			current = current.next;
-
 		}
 	} // print
 
-	/**
-	 * Node class represents a single node in the linked list
-	 */
 	private static class Node {
 		// instance variables
 		private RailCar railcar;
 		private Node next;
 
-		/**
-		 * constructor that creates a node object
-		 * 
-		 * @param railcar
-		 */
 		public Node(RailCar railcar) {
 			this.railcar = railcar;
 			next = null;
-
 		}
 	} // Node
 } // SingleLinkedList
 
 /**
- * The DoubleLinkedList class defines a doubly linked list of rail cars.
+ * the DoubleLinkedList class defines a doubly linked list of rail cars.
  */
 class DoubleLinkedList {
 	// instance variables
@@ -349,7 +334,7 @@ class DoubleLinkedList {
 	private Node tail;
 
 	/**
-	 * constructor that creates a doubly linked list object
+	 * constructor that creates a doubly linked list object.
 	 */
 	public DoubleLinkedList() {
 		head = null;
@@ -359,7 +344,7 @@ class DoubleLinkedList {
 	// behavior
 
 	/**
-	 * adds a rail car to the end of the linked list
+	 * adds a rail car to the end of the linked list.
 	 * 
 	 * @param railCarToAdd the rail car to add
 	 */
@@ -372,12 +357,11 @@ class DoubleLinkedList {
 			tail.next = railCarNode;
 			railCarNode.previous = tail;
 			tail = railCarNode;
-
 		}
 	} // addToEnd
 
 	/**
-	 * prints the linked list backwards
+	 * prints the linked list backwards.
 	 */
 	public void printBackwards() {
 		// declare variables
@@ -391,29 +375,19 @@ class DoubleLinkedList {
 		while (current != null) {
 			System.out.println(current.railcar.toString());
 			current = current.previous;
-
 		}
 	} // printBackwards
 
-	/**
-	 * Node class represents a single node in the doubly linked list
-	 */
 	private static class Node {
 		// instance variables
 		private RailCar railcar;
 		private Node next;
 		private Node previous;
 
-		/**
-		 * constructor that creates a node object
-		 * 
-		 * @param railcar
-		 */
 		public Node(RailCar railcar) {
 			this.railcar = railcar;
 			next = null;
 			previous = null;
-
 		}
 	} // Node
 } // DoubleLinkedList
