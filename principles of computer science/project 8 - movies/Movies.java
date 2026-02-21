@@ -2,7 +2,7 @@
 /**
  * Movies.java
  * 
- * this file defines the Movies class, which keeps track and manages a movie collection.
+ * this file defines the Movies class, which keeps track of a movie collection.
  * 
  * @author christopher romo
  * @since 07/21/2022
@@ -12,8 +12,7 @@
 import java.util.*;
 
 /**
- * the Movies class contains methods that keeps track and manages a movie
- * collection.
+ * the Movies class contains methods that keep track of a movie collection.
  */
 public class Movies {
     /**
@@ -61,7 +60,7 @@ public class Movies {
                 movies[i] = newMessage;
             }
         }
-        
+
         return movies;
     }
 
@@ -78,7 +77,7 @@ public class Movies {
     }
 
     /**
-     * main method - keeps track and manages a movie collection.
+     * main method - keeps track of a movie collection.
      * 
      * @param args command line arguments
      */

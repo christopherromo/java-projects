@@ -15,8 +15,8 @@ import java.io.*;
 
 /**
  * the Transportation class contains methods that create a cargo
- * terminal with semi-trucks and cargo planes, reads in information from files,
- * and prints the terminal display and status.
+ * terminal with semi-trucks and cargo planes, read in information from files,
+ * and print the terminal display and status.
  */
 public class Transportation {
 	/**

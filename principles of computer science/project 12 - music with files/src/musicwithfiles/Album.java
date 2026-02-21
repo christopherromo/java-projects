@@ -21,7 +21,7 @@ public class Album {
     private int year;
 
     /**
-     * constructor that creates an album object
+     * constructor that creates an album object.
      * 
      * @param title
      * @param artist
@@ -60,7 +60,7 @@ public class Album {
     }
 
     /**
-     * print an album
+     * prints the album information.
      */
     public void print() {
         System.out.println("Title:  " + title);

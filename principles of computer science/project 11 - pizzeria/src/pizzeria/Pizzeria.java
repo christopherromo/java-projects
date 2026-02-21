@@ -15,8 +15,7 @@ import java.util.Scanner;
 import java.util.ArrayList;
 
 /**
- * the Pizzeria class contains methods that takes a customer's order
- * and prints a receipt.
+ * the Pizzeria class contains methods that take a customer's order.
  */
 public class Pizzeria {
     // menu string
@@ -76,7 +75,7 @@ public class Pizzeria {
     }
 
     /**
-     * main method - simulates a pizzeria ordering system.
+     * main method - takes a customer's order.
      * 
      * @param args command line arguments
      */

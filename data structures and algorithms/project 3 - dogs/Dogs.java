@@ -14,8 +14,8 @@ import java.util.*;
 import java.io.*;
 
 /**
- * the Dogs class contains methods that reads in dog data from a file,
- * creates dog objects, and analyzes their behaviors.
+ * the Dogs class contains methods that read in dog data from a file,
+ * create dog objects, and analyze their behaviors.
  */
 public class Dogs {
 	/**

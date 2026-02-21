@@ -170,7 +170,7 @@ public class Stacks {
 	} // printStack (Generic)
 
 	/**
-	 * main method - fill stacks, call methods, and print results.
+	 * main method - fills stacks, calls methods, and prints results.
 	 * 
 	 * @param args - command line arguments
 	 * @throws IOException if file not found
