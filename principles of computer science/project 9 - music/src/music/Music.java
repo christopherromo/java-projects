@@ -44,11 +44,15 @@ public class Music {
     public static Album[] addAlbum(Scanner input, Album[] albums, int nbrOfAlbums) {
         System.out.println("Please enter a title: ");
         String title = input.nextLine();
+
         System.out.println("Please enter an artist: ");
         String artist = input.nextLine();
+
         System.out.println("Please enter a year: ");
         int year = input.nextInt();
+
         boolean isValidYear = year >= 1900 && year <= 2100;
+
         if (!isValidYear) {
             while (!isValidYear) {
                 System.out.println("Invalid response, try again.");
@@ -61,6 +65,7 @@ public class Music {
             input.nextLine();
 
         albums[nbrOfAlbums] = new Album(title, artist, year);
+
         return albums;
     }
 
@@ -75,13 +80,18 @@ public class Music {
     public static Album[] changeAlbum(Scanner input, Album[] albums, int nbrOfAlbums) {
         System.out.println("Please enter a title to change: ");
         String originalTitle = input.nextLine();
+
         System.out.println("Please enter a title: ");
         String newTitle = input.nextLine();
+
         System.out.println("Please enter an artist: ");
         String artist = input.nextLine();
+
         System.out.println("Please enter a year: ");
         int year = input.nextInt();
+
         boolean isValidYear = year >= 1900 && year <= 2100;
+
         if (!isValidYear) {
             while (!isValidYear) {
                 System.out.println("Invalid response, try again.");
@@ -170,6 +180,7 @@ public class Music {
     public static void printByYear(Scanner input, Album[] albums, int nbrOfAlbums) {
         System.out.println("Please enter a year: ");
         int year = input.nextInt();
+
         if (input.hasNextLine())
             input.nextLine();
 
@@ -188,13 +199,13 @@ public class Music {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        // initialize variables
         int nbrOfAlbums = 0;
         Album[] albums = new Album[100];
 
-        // scan for decision
+        // display menu and get decision
         displayMenu();
         int decision = input.nextInt();
+
         if (input.hasNextLine())
             input.nextLine();
 

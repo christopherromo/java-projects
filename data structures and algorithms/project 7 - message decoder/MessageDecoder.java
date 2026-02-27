@@ -25,7 +25,6 @@ public class MessageDecoder {
 	 * @param messageFile the scanner for the message file
 	 */
 	public static void fillQueue(Queue<KeyGridElement> aQueue, Scanner messageFile) {
-		// declare variables
 		KeyGridElement gridTile;
 		int row;
 		int column;
@@ -50,12 +49,10 @@ public class MessageDecoder {
 	 * @throws IOException if file not found
 	 */
 	public static void main(String[] args) throws IOException {
-		// declare variables
 		Queue<KeyGridElement> secretMessageOne = new LinkedList<>();
 		Queue<KeyGridElement> secretMessageTwo = new LinkedList<>();
 		ArrayList<Character> characters = new ArrayList<>();
 
-		// open files for reading
 		File keyGridFile = new File("input/data structures and algorithms input/messagedecoder_keygrid_input.txt");
 		File messageOneFile = new File("input/data structures and algorithms input/messagedecoder_message1_input.txt");
 		File messageTwoFile = new File("input/data structures and algorithms input/messagedecoder_message2_input.txt");
@@ -82,6 +79,7 @@ public class MessageDecoder {
 		// fill queues with keyGridElements and create iterators
 		fillQueue(secretMessageOne, messageOneScanner);
 		fillQueue(secretMessageTwo, messageTwoScanner);
+
 		Iterator<KeyGridElement> messageOneIterator = secretMessageOne.iterator();
 		Iterator<KeyGridElement> messageTwoIterator = secretMessageTwo.iterator();
 		Iterator<Character> decodedMessageOne = keyGrid.decodeMessage(messageOneIterator);
@@ -92,6 +90,7 @@ public class MessageDecoder {
 				+ "---------------------------");
 		keyGrid.printKeyGrid();
 		System.out.println();
+
 		System.out.println("1st Secret Decoded Message\n"
 				+ "--------------------------------------------------------------------");
 		while (decodedMessageOne.hasNext()) {
@@ -99,13 +98,13 @@ public class MessageDecoder {
 		}
 		System.out.println();
 		System.out.println();
+
 		System.out.println("2nd Secret Decoded Message\n"
 				+ "--------------------------------------------------------------------");
 		while (decodedMessageTwo.hasNext()) {
 			System.out.print(decodedMessageTwo.next());
 		}
 
-		// close scanners
 		keyGridScanner.close();
 		messageOneScanner.close();
 		messageTwoScanner.close();
@@ -187,7 +186,6 @@ class DecodingMachine {
 	 * @return iterator of decoded characters
 	 */
 	public Iterator<Character> decodeMessage(Iterator<KeyGridElement> msgIterator) {
-		// declare variables
 		ArrayList<Character> secretMessage = new ArrayList<>();
 		KeyGridElement gridTile;
 

@@ -26,7 +26,7 @@ public class LoginCreator {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        // welcome user to the password checker and explain parameters
+        // print welcome message and rules
         System.out.println("Welcome to the Password Checker!");
         System.out.println("Your username must be at least 8 characters and\n" +
                 "no more than 12.");
@@ -43,6 +43,7 @@ public class LoginCreator {
         isValidUsernameLength = usernameLength >= 8 && usernameLength <= 12;
 
         // prompt for password
+
         // length of password
         System.out.println("Please enter your password: ");
         String password = input.nextLine().toLowerCase();

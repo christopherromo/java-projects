@@ -27,13 +27,11 @@ public class TreeOfLife {
 	 * @throws IOException if file not found
 	 */
 	public static void main(String[] args) throws IOException {
-		// declare variables
 		int ID;
 		String name;
 		String songPhrase;
 		BinaryTree theTreeOfLife = new BinaryTree();
 
-		// open file for scanning
 		File treeInfo = new File("input/data structures and algorithms input/treeoflife_input.txt");
 		Scanner treeScanner = new Scanner(treeInfo);
 
@@ -47,6 +45,7 @@ public class TreeOfLife {
 			theTreeOfLife.insert(aParrot);
 
 		}
+
 		treeScanner.close();
 
 		// print song & visit leaves
@@ -162,6 +161,7 @@ class BinaryTree {
 				if (tempNode.left != null) {
 					tempQueue.offer(tempNode.left);
 				}
+				
 				if (tempNode.right != null) {
 					tempQueue.offer(tempNode.right);
 				}

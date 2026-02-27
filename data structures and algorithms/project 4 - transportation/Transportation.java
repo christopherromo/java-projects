@@ -25,7 +25,6 @@ public class Transportation {
 	 * @param terminal the cargo terminal
 	 */
 	public static void printTerminalStatus(CargoTerminal terminal) {
-		// declare array lists
 		ArrayList<SemiTruck> validTrucks = new ArrayList<SemiTruck>();
 		ArrayList<CargoPlane> validPlanes = new ArrayList<CargoPlane>();
 
@@ -85,7 +84,6 @@ public class Transportation {
 	 * @throws IOException if file not found
 	 */
 	public static void main(String[] args) throws IOException {
-		// declare variables
 		int dockNumber;
 		int truckNumber;
 		String destinationCity;
@@ -94,7 +92,6 @@ public class Transportation {
 		double capacity;
 		String cargoType;
 
-		// open files for reading
 		File trucks = new File("input/data structures and algorithms input/transportation_trucks_input.txt");
 		File planes = new File("input/data structures and algorithms input/transportation_planes_input.txt");
 		Scanner readTruckFile = new Scanner(trucks);
@@ -114,6 +111,7 @@ public class Transportation {
 			SemiTruck truck = new SemiTruck(truckNumber, destinationCity);
 			mainTerminal.addSemiTruck(dockNumber, truck);
 		}
+
 		while (readPlaneFile.hasNext()) {
 			standNumber = readPlaneFile.nextInt();
 			flightNumber = readPlaneFile.nextInt();
@@ -129,7 +127,6 @@ public class Transportation {
 		mainTerminal.displayCargoTerminal();
 		printTerminalStatus(mainTerminal);
 
-		// close files
 		readTruckFile.close();
 		readPlaneFile.close();
 	} // main
@@ -235,6 +232,7 @@ class CargoTerminal {
 			// increment count for header
 			truckCount++;
 		}
+
 		System.out.println();
 
 		// truck print statement
@@ -246,6 +244,7 @@ class CargoTerminal {
 				System.out.printf("%d	", loadingDock[i].getTruckNumber());
 			}
 		}
+
 		System.out.println();
 
 		// stand header print statement
@@ -256,6 +255,7 @@ class CargoTerminal {
 			// increment count for header
 			planeCount++;
 		}
+
 		System.out.println();
 
 		// plane print statement
@@ -267,6 +267,7 @@ class CargoTerminal {
 				System.out.printf("%d	", tarmac[i].getFlightNumber());
 			}
 		}
+		
 		System.out.println();
 	}
 } // CargoTerminal

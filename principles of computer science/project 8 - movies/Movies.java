@@ -38,6 +38,7 @@ public class Movies {
     public static String[] addMovie(Scanner input, String[] movies, int movieNbr) {
         System.out.println("Please enter a title: ");
         movies[movieNbr] = input.nextLine();
+
         return movies;
     }
 
@@ -52,6 +53,7 @@ public class Movies {
     public static String[] changeMovie(Scanner input, String[] movies, int movieNbr) {
         System.out.println("Please enter a title: ");
         String message = input.nextLine();
+
         System.out.println("Please enter a new title: ");
         String newMessage = input.nextLine();
 
@@ -87,10 +89,10 @@ public class Movies {
         // prompt menu and track decision
         displayMenu();
         int decision = input.nextInt();
+
         if (input.hasNextLine())
             input.nextLine();
 
-        // initialize variables
         int movieNbr = 0;
         String[] movies = new String[100];
 
@@ -134,14 +136,16 @@ public class Movies {
                     System.out.println("Invalid response, try again.");
                     break;
             }
+
             displayMenu();
             decision = input.nextInt();
+
             if (input.hasNextLine())
                 input.nextLine();
         }
         if (decision == 5) {
             // exit program
-            System.out.println("You've chosen to exit the application");
+            System.out.println("You've chosen to exit the application.");
             System.out.println("Goodbye!");
         }
 

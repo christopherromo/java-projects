@@ -229,7 +229,6 @@ public class MailOrder {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        // declare variables
         ArrayList<Customer> customers = new ArrayList<Customer>();
         ArrayList<Order> orders = new ArrayList<Order>();
         int orderNbr = 0;

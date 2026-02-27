@@ -28,6 +28,7 @@ public class Pizza extends OrderItem {
     public void promptForDetails(Scanner input) {
         System.out.println("What toppings do you want on your pizza? (. to end)");
         String topping = input.nextLine();
+
         while (!topping.equals(".")) {
             toppings.add(topping);
             System.out.println("What else do you want on your pizza? (. to end)");
@@ -40,6 +41,7 @@ public class Pizza extends OrderItem {
     public double calculateCost() {
         toppingCost = 0.50;
         cost = 10.0 + toppingCost * toppings.size();
+        
         return cost;
     }
 

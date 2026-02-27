@@ -52,6 +52,7 @@ public class Decrypter {
     public static String promptForString(Scanner input, String prompt) {
         System.out.print(prompt);
         String message = input.nextLine();
+
         return message;
     }
 
@@ -65,6 +66,7 @@ public class Decrypter {
     public static int promptForInteger(Scanner input, String prompt) {
         System.out.print(prompt);
         int integer = input.nextInt();
+
         if (input.hasNextLine())
             input.nextLine();
 
@@ -85,12 +87,14 @@ public class Decrypter {
                 c -= 26;
             }
         }
+
         if (c >= 'A' && c <= 'Z') {
             c += s;
             if ((c > 'Z')) {
                 c -= 26;
             }
         }
+
         return c;
     }
 
@@ -108,12 +112,14 @@ public class Decrypter {
                 c += 26;
             }
         }
+
         if (c >= 'A' && c <= 'Z') {
             c -= s;
             if ((c < 'A')) {
                 c += 26;
             }
         }
+
         return c;
     }
 
@@ -127,11 +133,13 @@ public class Decrypter {
     public static String encryptMessage(String message, int shift) {
         String encryptedMessage = "";
         int messageLength = message.length();
+
         for (int i = 0; i < messageLength; i++) {
             char letter = message.charAt(i);
             char encryptedLetter = encryptCharacter(letter, shift);
             encryptedMessage = encryptedMessage + encryptedLetter;
         }
+
         return encryptedMessage;
     }
 
@@ -145,11 +153,13 @@ public class Decrypter {
     public static String decryptMessage(String message, int shift) {
         String decryptedMessage = "";
         int messageLength = message.length();
+
         for (int i = 0; i < messageLength; i++) {
             char letter = message.charAt(i);
             char decryptedLetter = decryptCharacter(letter, shift);
             decryptedMessage = decryptedMessage + decryptedLetter;
         }
+
         return decryptedMessage;
     }
 
@@ -173,7 +183,9 @@ public class Decrypter {
     public static void handleEncrypt(Scanner input) {
         String message = promptForString(input, "Enter a message to encrypt:");
         int shift = promptForInteger(input, "Enter a shift value:");
+
         String encryptedMessage = encryptMessage(message, shift);
+
         System.out.println("Your message: " + message);
         System.out.println("Encrypts as:  " + encryptedMessage);
     }
@@ -186,7 +198,9 @@ public class Decrypter {
     public static void handleDecrypt(Scanner input) {
         String message = promptForString(input, "Enter a message to decrypt:");
         int shift = promptForInteger(input, "Enter a shift value:");
+
         String decryptedMessage = decryptMessage(message, shift);
+
         System.out.println("Your message: " + message);
         System.out.println("Decrypts as:  " + decryptedMessage);
     }
@@ -198,8 +212,10 @@ public class Decrypter {
      */
     public static void handleBruteForce(Scanner input) {
         String message = promptForString(input, "Enter a message to brute-force:");
+
         System.out.println("Your message: " + message);
         System.out.println("Brute-force decrypts as:");
+
         decryptByBruteForce(message);
         System.out.println();
     }
@@ -212,7 +228,7 @@ public class Decrypter {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        // prompt menu and get decision
+        // display menu and get decision
         displayIntro();
         displayMenu();
         int decision = input.nextInt();
@@ -235,9 +251,11 @@ public class Decrypter {
                     System.out.println("Invalid");
                     break;
             }
+
             // loop the menu
             displayMenu();
             decision = input.nextInt();
+
             if (input.hasNextLine())
                 input.nextLine();
         }

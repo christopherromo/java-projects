@@ -26,7 +26,6 @@ public class TransportationWithQueues {
 	 * @throws IOException if file not found
 	 */
 	public static void main(String[] args) throws IOException {
-		// declare variables
 		int dockNumber;
 		int truckNumber;
 		String destinationCity;
@@ -35,12 +34,10 @@ public class TransportationWithQueues {
 		double capacity;
 		String cargoType;
 
-		// declare objects
 		AirTrafficController airControl = new AirTrafficController();
 		Taxiways mainTaxiway = new Taxiways();
 		Runway mainRunway = new Runway();
 
-		// open files for reading
 		File trucks = new File("input/data structures and algorithms input/transportationwithqueues_trucks_input.txt");
 		File planes = new File("input/data structures and algorithms input/transportationwithqueues_planes_input.txt");
 		Scanner readTruckFile = new Scanner(trucks);
@@ -77,17 +74,18 @@ public class TransportationWithQueues {
 		System.out.println();
 		mainTerminal.displayTerminal();
 		System.out.println();
+
 		airControl.movePlanesToTaxiways(mainTerminal, mainTaxiway);
 		System.out.println();
 		System.out.println("Show empty tarmac in cargo terminal...");
 		System.out.println();
 		mainTerminal.displayTerminal();
 		System.out.println();
+
 		airControl.movePlanesToRunway(mainTaxiway, mainRunway);
 		System.out.println();
 		airControl.clearedForTakeoff(mainRunway);
 
-		// close files
 		readTruckFile.close();
 		readPlaneFile.close();
 	} // main
@@ -177,6 +175,7 @@ class Terminal {
 			Queue<Plane> tempQueue = new LinkedList<>();
 			tempQueue.offer(tarmac[stand]);
 			tarmac[stand] = null;
+			
 			return tempQueue.poll();
 		}
 	}
@@ -352,14 +351,7 @@ class Plane implements Comparable<Plane> {
 
 	@Override
 	public int compareTo(Plane otherPlane) {
-		/**
-		 * first the type of incoming plane is determined using if, else if, else for
-		 * the three types
-		 * then, the other planes type is determined, allowing comparisons of planes
-		 * with different types
-		 * lastly, if both planes have the same type, the flight numbers are compared
-		 * (smaller #s first)
-		 */
+		// planes are compared by priority of cargo type, then by flight number
 		int compareValue = 0;
 
 		if (cargoType.equals("Military")) {
@@ -451,7 +443,7 @@ class Taxiways {
  * the Runway class creates a runway object.
  */
 class Runway {
-	// Instance variables
+	// instance variables
 	private Queue<Plane> runway;
 
 	/**
@@ -527,6 +519,7 @@ class AirTrafficController {
 					tempQueue.peek().getCargoType()));
 			runway.addPlaneToRunway(tempQueue.poll());
 		}
+		
 		while (!taxiways.isBasicTaxiwayEmpty()) {
 			tempQueue.offer(taxiways.removePlaneFromBasicTaxiway());
 			System.out.println(String.format("Moved to runway flight %4d\t\t%-15s\t\t%-10s",

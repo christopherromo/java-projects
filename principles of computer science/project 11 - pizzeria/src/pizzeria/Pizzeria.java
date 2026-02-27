@@ -80,7 +80,6 @@ public class Pizzeria {
      * @param args command line arguments
      */
     public static void main(String[] args) {
-        // initialize variables
         Scanner input = new Scanner(System.in);
         int response;
         ArrayList<OrderItem> items = new ArrayList<OrderItem>();

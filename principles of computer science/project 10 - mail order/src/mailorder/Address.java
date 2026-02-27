@@ -30,7 +30,6 @@ public class Address {
      * @param zip
      */
     public Address(String streetAddress, String city, String state, int zip) {
-        // initializes variables
         this.streetAddress = streetAddress;
         this.city = city;
         this.state = state;
@@ -82,6 +81,7 @@ public class Address {
         String[] cityLine = cityStateZip.split(", ");
         String[] stateZip = cityLine[1].split(" ");
         int zipper = Integer.parseInt(stateZip[1]);
+
         return new Address(streetAddress, cityLine[0], stateZip[0], zipper);
     }
 

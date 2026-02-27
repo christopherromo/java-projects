@@ -44,6 +44,7 @@ public class Dogs {
 	 */
 	public static Dog findBestProtector(ArrayList<Dog> protectors) {
 		int max = 0;
+
 		// find max number in set
 		for (Dog dog : protectors) {
 			if (((Protector) dog).protect() > max) {
@@ -57,6 +58,7 @@ public class Dogs {
 				return dog;
 			}
 		}
+
 		return null;
 	} // findBestProtector
 
@@ -121,11 +123,9 @@ public class Dogs {
 	 * @throws IOException if file not found
 	 */
 	public static void main(String[] args) throws IOException {
-		// open file
 		File inputFileName = new File("input/data structures and algorithms input/dogs_input.txt");
 		Scanner inputFile = new Scanner(inputFileName);
 
-		// declare variables
 		int counter = 0;
 		int dogNum = inputFile.nextInt();
 		Dog[] dogs = new Dog[dogNum];
@@ -163,6 +163,7 @@ public class Dogs {
 					break;
 			}
 		}
+		
 		inputFile.close();
 
 		// print the dogs data using methods

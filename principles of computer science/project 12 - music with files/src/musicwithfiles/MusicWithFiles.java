@@ -60,16 +60,20 @@ public class MusicWithFiles {
     public static void addAlbum(Scanner input, ArrayList<Album> albums) {
         System.out.println("Please enter a title: ");
         String title = input.nextLine();
+
         System.out.println("Please enter an artist: ");
         String artist = input.nextLine();
+
         System.out.println("Please enter a year: ");
         int year = input.nextInt();
-        boolean isValidYear = year >= 1877 && year <= 2020;
+
+        boolean isValidYear = year >= 1877 && year <= 2100;
+        
         if (!isValidYear) {
             while (!isValidYear) {
                 System.out.println("Invalid response, try again.");
                 year = input.nextInt();
-                isValidYear = year >= 1877 && year <= 2020;
+                isValidYear = year >= 1877 && year <= 2100;
             }
         }
 
@@ -88,18 +92,23 @@ public class MusicWithFiles {
     public static void changeAlbum(Scanner input, ArrayList<Album> albums) {
         System.out.println("Please enter a title: ");
         String originalTitle = input.nextLine();
+
         System.out.println("Please enter a title: ");
         String newTitle = input.nextLine();
+
         System.out.println("Please enter an artist: ");
         String artist = input.nextLine();
+
         System.out.println("Please enter a year: ");
         int year = input.nextInt();
-        boolean isValidYear = year >= 1877 && year <= 2020;
+
+        boolean isValidYear = year >= 1877 && year <= 2100;
+
         if (!isValidYear) {
             while (!isValidYear) {
                 System.out.println("Invalid response, try again.");
                 year = input.nextInt();
-                isValidYear = year >= 1877 && year <= 2020;
+                isValidYear = year >= 1877 && year <= 2100;
             }
         }
 
@@ -225,6 +234,7 @@ public class MusicWithFiles {
         PrintWriter outputFile = null;
         System.out.println("Now saving musicwithfiles_output.txt...");
         String fileName = "output/principles of computer science output/musicwithfiles_output.txt";
+
         try {
             File outputFileName = new File(fileName);
             outputFile = new PrintWriter(outputFileName);
@@ -250,7 +260,6 @@ public class MusicWithFiles {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        // initialize array list
         ArrayList<Album> albums = new ArrayList<Album>();
 
         // scan for decision
@@ -290,17 +299,21 @@ public class MusicWithFiles {
                     System.out.println("Invalid response, try again.");
                     break;
             }
+
             // loop the menu
             if (decision >= 1 && decision <= 8) {
                 displayMenu();
             }
+
             decision = input.nextInt();
+
             if (input.hasNextLine())
                 input.nextLine();
         }
         if (decision == 9) {
             // exit program
             System.out.println("Goodbye!");
+            
             input.close();
         }
     } // main

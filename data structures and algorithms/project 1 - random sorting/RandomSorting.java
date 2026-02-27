@@ -28,11 +28,9 @@ public class RandomSorting {
 	 * @throws IOException if file not found
 	 */
 	public static void main(String[] args) throws IOException {
-		// initialize file and output
 		File fileName = new File("output/data structures and algorithms output/randomsorting_output.txt");
 		PrintWriter outputFile = new PrintWriter(fileName);
 
-		// initialize & declare variables
 		int min = -25;
 		int max = 25;
 		int numToCheck;
@@ -54,17 +52,21 @@ public class RandomSorting {
 			System.out.println("Writing to file: " + randNum);
 			outputFile.println(randNum);
 		}
+
 		outputFile.close();
 
 		// fill array from file
 		Scanner readFile = new Scanner(fileName);
+
 		for (int i = 0; i < 35; i++) {
 			numbers[i] = readFile.nextInt();
 		}
+
 		readFile.close();
 
 		// sort array and copy into new array backwards
 		Arrays.sort(numbers);
+
 		for (int i = 34; i >= 0; i--) {
 			newNums[i] = numbers[newSum];
 			newSum++;
@@ -85,6 +87,7 @@ public class RandomSorting {
 
 		// reverse instance array to match newNums array
 		newSum = 0;
+		
 		for (int i = 34; i >= 0; i--) {
 			newInstances[i] = instances[newSum];
 			newSum++;

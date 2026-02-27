@@ -27,11 +27,9 @@ public class TourDeTurtles {
      * @throws IOException if file not found
      */
     public static void main(String[] args) throws IOException {
-        // open file
         File inputFileName = new File("input/data structures and algorithms input/tourdeturtles_input.txt");
         Scanner inputFile = new Scanner(inputFileName);
 
-        // declare variables
         int counter = 0;
         int turtleCount = inputFile.nextInt();
         SeaTurtle[] turtles = new SeaTurtle[turtleCount];
@@ -65,6 +63,7 @@ public class TourDeTurtles {
                     break;
             }
         }
+        
         inputFile.close();
 
         // print out tracked turtles
@@ -73,6 +72,7 @@ public class TourDeTurtles {
                 " Name   	Type		Days	Miles	Threats to Survival\n" +
                 "    	    			Tracked Traveled\n" +
                 "-------------------------------------------------------------------------------------");
+
         for (int i = 0; i < turtles.length; i++) {
             String result = String.format("%-15s	%s	%d	%.1f	%s", turtles[i].getName(), turtles[i].getType(),
                     turtles[i].getDaysTracked(), turtles[i].getMilesTraveled(), turtles[i].threatsToSurvival());
@@ -267,7 +267,6 @@ class Tour {
             }
         }
 
-        // declare array
         turtlesToTrack = new SeaTurtle[numTurtles];
 
         // add turtles to the array

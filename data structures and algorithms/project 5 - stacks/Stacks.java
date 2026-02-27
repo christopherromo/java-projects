@@ -23,7 +23,6 @@ public class Stacks {
 	 * @param stack stack to modify
 	 */
 	public static void replaceZerosWithTen(Stack<Integer> stack) {
-		// declare variables
 		int stackSize = stack.size();
 		Stack<Integer> tempStack = new Stack<>();
 
@@ -49,7 +48,6 @@ public class Stacks {
 	 * @param aStack stack to sort
 	 */
 	public static <E extends Comparable<E>> void sortStack(GenericStack<E> aStack) {
-		// declare variables
 		E value;
 		boolean foundInsertLocation;
 		int stackSize = aStack.getSize();
@@ -91,7 +89,6 @@ public class Stacks {
 	 */
 	public static <E extends Comparable<E>> GenericStack<E> mergeStacks(GenericStack<E> stackOne,
 			GenericStack<E> stackTwo) {
-		// declare mergedStack
 		GenericStack<E> mergedStack = new GenericStack<>();
 
 		// run loop to compare values on both stacks while not both aren't empty
@@ -103,8 +100,7 @@ public class Stacks {
 			}
 		}
 
-		// after the while is done, only one of these will be executed
-		// clear the remaining stack of values by pushing onto merge stacks
+		// clear remaining values from stack one or two and place on merged stack
 		if (!stackOne.isEmpty()) {
 			while (!stackOne.isEmpty()) {
 				mergedStack.push(stackOne.pop());
@@ -126,7 +122,6 @@ public class Stacks {
 	 * @param stack stack to print
 	 */
 	public static void printStack(Stack<Integer> stack) {
-		// declare variables
 		int stackSize = stack.size();
 		Stack<Integer> tempStack = new Stack<>();
 
@@ -151,7 +146,6 @@ public class Stacks {
 	 * @param stack stack to print
 	 */
 	public static <E> void printStack(GenericStack<E> stack) {
-		// declare variables
 		int stackSize = stack.getSize();
 		GenericStack<E> tempStack = new GenericStack<>();
 
@@ -177,8 +171,6 @@ public class Stacks {
 	 */
 	public static void main(String[] args) throws IOException {
 		// part one
-
-		// declare variables
 		int[] numbers = { 0, 0, 4, 3, 0, 0, 2, 1, 0, 0 };
 		Stack<Integer> aStack = new Stack<>();
 
@@ -189,13 +181,12 @@ public class Stacks {
 
 		// call replaceZerosWithTen to modify the stack & print
 		replaceZerosWithTen(aStack);
+
 		System.out.println("Stack Values After 0's Replaced with 10\n"
 				+ "----------------------------------------------");
 		printStack(aStack);
 
 		// part two
-
-		// declare variables
 		int value;
 		String text;
 		GenericStack<Integer> intStackOne = new GenericStack<>();
@@ -205,7 +196,6 @@ public class Stacks {
 		GenericStack<Integer> mergedIntStack;
 		GenericStack<String> mergedStringStack;
 
-		// open files for reading
 		File integersOne = new File("input/data structures and algorithms input/stacks_int1_input.txt");
 		File integersTwo = new File("input/data structures and algorithms input/stacks_int2_input.txt");
 		File stringsOne = new File("input/data structures and algorithms input/stacks_str1_input.txt");
@@ -233,6 +223,7 @@ public class Stacks {
 			text = readStringTwo.next();
 			stringStackTwo.push(text);
 		}
+
 		readIntOne.close();
 		readIntTwo.close();
 		readStringOne.close();
@@ -242,6 +233,7 @@ public class Stacks {
 		System.out.println("Values read from stacks_int1_input.txt pushed onto integer1 stack\n"
 				+ "----------------------------------------------");
 		printStack(intStackOne);
+
 		System.out.println("Values read from stacks_int2_input.txt pushed onto integer2 stack\n"
 				+ "----------------------------------------------");
 		printStack(intStackTwo);
@@ -249,15 +241,18 @@ public class Stacks {
 		// print sorted integer stacks
 		sortStack(intStackOne);
 		sortStack(intStackTwo);
+
 		System.out.println("Integer1 Stack: sorted largest to smallest\n"
 				+ "----------------------------------------------");
 		printStack(intStackOne);
+
 		System.out.println("Integer2 Stack: sorted largest to smallest\n"
 				+ "----------------------------------------------");
 		printStack(intStackTwo);
 
 		// print merged integer stacks
 		mergedIntStack = mergeStacks(intStackOne, intStackTwo);
+
 		System.out.println("Merged Stack: sorted smallest to largest\n"
 				+ "----------------------------------------------");
 		printStack(mergedIntStack);
@@ -266,6 +261,7 @@ public class Stacks {
 		System.out.println("Values read from stacks_str1_input.txt pushed onto string1 stack\n"
 				+ "----------------------------------------------");
 		printStack(stringStackOne);
+
 		System.out.println("Values read from stacks_str2_input.txt pushed onto string2 stack\n"
 				+ "----------------------------------------------");
 		printStack(stringStackTwo);
@@ -273,15 +269,18 @@ public class Stacks {
 		// print sorted string stacks
 		sortStack(stringStackOne);
 		sortStack(stringStackTwo);
+
 		System.out.println("String1 Stack: sorted in reverse alphabetical\n"
 				+ "----------------------------------------------");
 		printStack(stringStackOne);
+
 		System.out.println("String2 Stack: sorted in reverse alphabetical\n"
 				+ "----------------------------------------------");
 		printStack(stringStackTwo);
 
 		// print merged string stacks
 		mergedStringStack = mergeStacks(stringStackOne, stringStackTwo);
+
 		System.out.println("Merged Stack: alphabetical\n"
 				+ "----------------------------------------------");
 		printStack(mergedStringStack);

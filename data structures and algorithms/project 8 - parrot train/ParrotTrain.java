@@ -26,17 +26,14 @@ public class ParrotTrain {
 	 * @throws IOException if file not found
 	 */
 	public static void main(String[] args) throws IOException {
-		// declare variables
 		int number;
 		int result;
 		String freight;
 		String destination;
 
-		// open file for scanning
 		File trainInfo = new File("input/data structures and algorithms input/parrottrain_input.txt");
 		Scanner trainScanner = new Scanner(trainInfo);
 
-		// initialize the linked lists
 		SingleLinkedList parrotTrain = new SingleLinkedList();
 		DoubleLinkedList theParrotTrainTwo = new DoubleLinkedList();
 
@@ -50,29 +47,35 @@ public class ParrotTrain {
 			parrotTrain.addByDestination(aRailCar);
 			theParrotTrainTwo.addToEnd(aRailCar);
 		}
+
 		trainScanner.close();
 
 		// print the linked lists and simulate a journey
 		System.out.println("Train departs New York\n");
 		parrotTrain.print();
+
 		System.out.println("Stop 1: Train Arrives in Washington DC");
 		result = parrotTrain.removeByDestination("Washington DC");
 		System.out.println("Removed " + result + " Washington DC rail cars\n");
 		parrotTrain.print();
+
 		System.out.println("Stop 2: Train Arrives in Charleston");
 		result = parrotTrain.removeByDestination("Charleston");
 		System.out.println("Removed " + result + " Charleston rail cars\n");
 		parrotTrain.print();
+
 		System.out.println("Stop 3: Train Arrives in Orlando");
 		result = parrotTrain.removeByDestination("Orlando");
 		System.out.println("Removed " + result + " Orlando rail cars");
 		parrotTrain.removeByFreight("parrots");
 		System.out.println("Remove all rail cars with parrots\n");
 		parrotTrain.print();
+
 		System.out.println("Stop 4: Train Arrives in West Palm Beach");
 		result = parrotTrain.removeByDestination("West Palm Beach");
 		System.out.println("Removed " + result + " West Palm Beach rail cars - train should be empty!\n");
 		parrotTrain.print();
+
 		System.out.println("\n\nRail Cars in Doubly Linked List - Printed Backwards\n");
 		theParrotTrainTwo.printBackwards();
 	} // main
@@ -165,7 +168,6 @@ class SingleLinkedList {
 	 * @param railCarToAdd the rail car to add
 	 */
 	public void addByDestination(RailCar railCarToAdd) {
-		// declare variables
 		Node previous = null;
 		Node current = head;
 		Node railCarNode = new Node(railCarToAdd);
@@ -223,7 +225,6 @@ class SingleLinkedList {
 	 * @return the number of rail cars removed
 	 */
 	public int removeByDestination(String destination) {
-		// declare variables
 		Node previous = null;
 		Node current = head;
 		int railCarsRemoved = 0;
@@ -265,7 +266,6 @@ class SingleLinkedList {
 	 * @param freight the freight to remove
 	 */
 	public void removeByFreight(String freight) {
-		// declare variables
 		Node previous = null;
 		Node current = head;
 
@@ -299,7 +299,6 @@ class SingleLinkedList {
 	 * prints the linked list.
 	 */
 	public void print() {
-		// declare variables
 		Node current = head;
 
 		// print header
@@ -361,10 +360,26 @@ class DoubleLinkedList {
 	} // addToEnd
 
 	/**
+	 * prints the linked list forwards.
+	 */
+	public void printForwards() {
+		Node current = head;
+
+		// print header
+		System.out.println("RailCar\t\tFreight\t\t\t Destination City\n"
+				+ "-------------------------------------------------------");
+
+		// iterate through linked list
+		while (current != null) {
+			System.out.println(current.railcar.toString());
+			current = current.next;
+		}
+	} // printForwards
+
+	/**
 	 * prints the linked list backwards.
 	 */
 	public void printBackwards() {
-		// declare variables
 		Node current = tail;
 
 		// print header
