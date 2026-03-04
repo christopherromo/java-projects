@@ -11,8 +11,8 @@ This a collection of Java projects from both of the Java classes I took. They fo
 ## Technologies 💻
 
    - Java
-   - Apache NetBeans IDE (used for "Principles of Computer Science" projects)
-   - Eclipse IDE (used for "Data Structures and Algorithms" projects)
+   - Apache NetBeans IDE
+   - Eclipse IDE
    - Visual Studio Code
 
 ## Features 📄
