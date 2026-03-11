@@ -6,7 +6,7 @@
 
 ---
 
-This a collection of Java projects from both of the Java classes I took. They focus on the fundamentals of object-oriented programming and programming in general, with these two classes being my introduction to computer science. "Principles of Computer Science" focuses on core concepts of programming like variables and control structures. "Data Structures and Algorithms" focuses on deeper concepts like the four pillars of object-oriented programming and time complexity.
+This is a collection of Java projects from both of the Java classes I took. They focus on the fundamentals of object-oriented programming and programming in general, with these two classes being my introduction to computer science. "Principles of Computer Science" focuses on core concepts of programming like variables and control structures. "Data Structures and Algorithms" focuses on deeper concepts like the four pillars of object-oriented programming and time complexity.
 
 ## Technologies 💻
 
@@ -17,7 +17,7 @@ This a collection of Java projects from both of the Java classes I took. They fo
 
 ## Features 📄
 
-   - **Java Projects:** The actual code created for these classes. Other than slight polishing, these remain functionally identical to what I turned in. For the first class, packages were created for Java projects that have multiple classes. For the second, Java projects are all contained within a single file.
+   - **Java Projects:** The actual code created for these classes. Other than slight polishing, these remain functionally identical to what I turned in. For the first class, packages were created for Java projects that have multiple classes. For the second, each Java file is one project.
 
    - **Input and Output:** Folders housing text files that are either input or output.
 
@@ -27,7 +27,7 @@ This a collection of Java projects from both of the Java classes I took. They fo
 
 **The Process:** These projects were created sequentially, starting with the "Principles of Computer Science" projects and then the "Data Structures and Algorithms" projects. Each one built on the previous and introduced new concepts. For the first class, concepts explored include variables, control structures, methods, arrays, classes, objects, inheritance, and file handling. For the second class, concepts explored include libraries, abstraction, interfaces, array lists, stacks, queues, priority queues, iterators, linked lists, and binary trees. Each project was usually completed in a 1-2 week period.
 
-**Key Takeaways:** These classes introduced me to core concepts of computer science. Java is a high-level language that is object-oriented, meaning most concepts from this language can be applied to similar languages. I started by learning how to setup different environments, set up Java classes, and write Java code. I then learned deeper concepts like the four pillars of object-oriented programming (abstraction, encapsulation, inheritance, and polymorphism), how to calculate time complexity (Big-O Notation), how different algorithms work (iterative vs. recursive), and more. Overall, these projects helped introduce me to computer science while building my ability to learn new technologies.
+**Key Takeaways:** These classes introduced me to core concepts of computer science. Java is a object-oriented language, meaning most concepts from this language can be applied to similar languages. I started by learning how to setup my Java environments and write Java code. I then learned deeper concepts like the four pillars of object-oriented programming (abstraction, encapsulation, inheritance, and polymorphism), how to calculate time complexity (Big-O Notation), how different algorithms work (iterative vs. recursive), and more. Overall, these projects helped introduce me to computer science while building my ability to learn new technologies.
 
 ## Running the Projects 🎬
 
